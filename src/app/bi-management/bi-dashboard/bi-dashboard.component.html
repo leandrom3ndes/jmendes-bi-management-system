@@ -1,0 +1,23 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="/biManagement/biDashboard">Painel de controlo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElement">Elementos BI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElementCollection">Coleção</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biKnowage">Elementos do Knowage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biEngines">Ferramentas BI</a>
+    </li>
+</ul>
+
+<div class="container-fluid">
+    <br>
+    <app-bi-widgets-counter></app-bi-widgets-counter>
+    <iframe src="http://localhost:8080/knowage" height="750px" width="100%" frameBorder="0"></iframe>
+</div>

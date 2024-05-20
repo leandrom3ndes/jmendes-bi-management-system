@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ 'FORM-MANAGEMENT.FORM-MANAGEMENT' | translate }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="name">{{ 'FORM-MANAGEMENT.LABEL-NAME' | translate }}</label>
+        <input class="form-control" id="name" [(ngModel)]="dynamicForm.name" type="text"
+               placeholder="{{ 'FORM-MANAGEMENT.PLACEHOLDER-NAME' | translate }}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="action">{{ 'FORM-MANAGEMENT.LABEL-ACTION' | translate }}</label>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="saveData()">{{ 'FORM-MANAGEMENT.PROCEED-BUTTON' | translate }}</button>
+</div>

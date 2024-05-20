@@ -1,0 +1,39 @@
+{
+  "Page_Name": "Properties",
+  "THEADER1" : "Entity",
+  "THEADER2" : "ID",
+  "THEADER3" : "Property",
+  "THEADER4" : "Value Type",
+  "THEADER5" : "Field Name",
+  "THEADER6" : "Field Type",
+  "THEADER7" : "Unit Type",
+  "THEADER8" : "Field Size",
+  "THEADER9" : "Mandatory",
+  "THEADER10" : "State",
+  "THEADER11" : "Created_on",
+  "THEADER12" : "Updated_on",
+  "THEADER13" : "Deleted_on",
+  "THEADER14" : "Add Properties",
+  "THEADER15" : "Relation",
+  "BTNTABLE1" : "Edit",
+  "BTNTABLE2" : "History",
+  "BTNTABLE3" : "Property drag and drop reorder",
+  "BTNTABLE4" : "Remove",
+
+  "NO_PROPERTIES" : "No properties",
+
+  "SAVE_SUCCESS_MESSAGE" : "Property inserted successfully!!",
+  "EDIT_SUCCESS_MESSAGE" : "Property edited successfully!!",
+  "SUCCESS" : "Success!!",
+
+  "EDIT_FORM_NAME": "Edit Property",
+  "ADD_FORM_NAME": "Add New Property",
+
+  "INPUT_REF_ENT" : "Referenciated Entity",
+  "FORM_DRAG_DROP" : "Drag and Drop Properties",
+
+  "BTN1FORM" : "Save changes",
+  
+  "BTNPAGINATION1" : "Next",
+  "BTNPAGINATION2" : "Prev"
+}

@@ -1,0 +1,398 @@
+{
+  "BLOCKLY-PAGE": {
+    "TITLE": "Action Rules Management",
+    "ACTIONS": "Available Actions",
+    "SHOW-CODE": "Show Code",
+    "SHOW-XML-BLOCKLY": "Show XML Blockly",
+    "SAVE-TO-DB": "Save Action Rule In Database",
+    "LOAD-AR": "Load Action Rule",
+    "GENERATOR": "Blockly Generator"
+  },
+  "BLOCKLY-CATEGORY": {
+    "GENERAL": "General",
+    "EVALUATE": "Actions",
+    "COMPUTE": "Compute",
+    "SPECIFY-DATA": "Specify Data",
+    "PROPERTIES": "Properties"
+  },
+  "BLOCKLY-BLOCKS": {
+    "WHEN-IS-DO": {
+      "WHEN": "when",
+      "IS": "is",
+      "ACTIONS": "actions"
+    },
+    "ACTION": {
+      "TITLE": "action",
+      "DROPDOWN": {
+        "NONE": "None",
+        "ASSIGN-EXPRESSION": {
+          "TITLE": "assign expression"
+        },
+        "READ-VALUE": {
+          "TITLE": "read value"
+        },
+        "PRODUCE-DOCUMENT": {
+          "TITLE": "produce document"
+        },
+        "USER-OUTPUT": {
+          "TITLE": "user output",
+          "DROPDOWN": {
+            "NEW": "create new text",
+            "EXISTING": "use existing text"
+          },
+          "TEMPLATE-NAME": "name",
+          "DEFAULT-TEMPLATE-NAME-TEXT": "insert the template name here",
+          "TEXT-NOT-EDITABLE": "Custom Text",
+          "TYPE": {
+            "TITLE": "type",
+            "MODAL": {
+              "TITLE": "window",
+              "HEADER": "header",
+              "DEFAULT-HEADER": "information",
+              "BUTTON": "button",
+              "DEFAULT-BUTTON": "continue"
+            },
+            "TOAST": {
+              "TITLE": "notification",
+              "CLASS-DROPDOWN": {
+                "SUCCESS": "success",
+                "INFORMATION": "information",
+                "WARNING": "warning",
+                "ERROR": "error",
+                "CUSTOM": "custom"
+              },
+              "CLASS": "class",
+              "COLOUR": "colour",
+              "CUSTOM-TITLE": "title",
+              "DEFAULT-CUSTOM-TITLE": "notification",
+              "CUSTOM-COLOURS": {
+                "DARK-PINK": "dark pink",
+                "PINK": "pink",
+                "LIGHT-PINK": "light pink",
+                "PURPLE": "purple",
+                "LIGHT-PURPLE": "light purple",
+                "LIGHT-ORANGE": "light orange",
+                "DARK-BLUE": "dark blue",
+                "DARK-RED": "dark red",
+                "GREY": "grey"
+              }
+            }
+          },
+          "DEFAULT-TEXT": "insert new text here",
+          "TEMPLATE-EDITOR-TEXT": "template editor",
+          "TEMPLATE-EDITOR-BUTTON": "open"
+        },
+        "EXTERNAL-CALL": {
+          "TITLE": "external call"
+        },
+        "CAUSAL-LINK": {
+          "TITLE": "causal link",
+          "MUST-BE": "must be",
+          "MIN": "min: ",
+          "MAX": "max: "
+        },
+        "USER-INPUT": {
+          "TITLE": "user input",
+          "ACTION-NAME": "action name",
+          "ACTION-NAME-DEFAULT-TEXT": "insert the action name here",
+          "PROPERTIES": "property(ies)"
+        }
+      }
+    },
+    "IF_THEN": {
+      "IF": "if",
+      "THEN": "then",
+      "ELSE": "else"
+    },
+    "WHILE": {
+      "WHILE": "while",
+      "DO": "do"
+    },
+    "CONDITION": {
+      "TITLE": "condition",
+      "TERMS": "term(s)",
+      "DROPDOWN": {
+        "IS-TRUE": "Is True",
+        "NOT": "Not",
+        "AND": "And",
+        "OR": "Or"
+      }
+    },
+    "COMP-EVALUATED-EXPRESSION": {
+      "TITLE": "comp evaluated expression",
+      "OPERATOR": "operator"
+    },
+    "USER-EVALUATED-EXPRESSION": {
+      "TITLE": "user evaluated expression",
+      "DROPDOWN": {
+        "NEW": "New expression",
+        "EXISTING": "Existing expression"
+      },
+      "DEFAULT-TEXT": "insert new expression text here"
+    },
+    "COMPUTE-EXPRESSION": {
+      "TITLE": "compute expression",
+      "TERMS": "term(s)"
+    },
+    "QUERY": {
+      "TITLE": "query",
+      "DROPDOWN-DEFAULT": "None"
+    },
+    "VALUE": {
+      "TITLE": "value",
+      "DEFAULT-VALUE": "Insert value here",
+      "VALUE-TYPE-DROPDOWN": {
+        "TITLE": "value type",
+        "STRING": "String",
+        "INTEGER-NUMBER": "Integer Number",
+        "REAL-NUMBER": "Real Number",
+        "BOOLEAN": "Boolean"
+      }
+    },
+    "CONSTANT": {
+      "TITLE": "constant",
+      "DROPDOWN": {
+        "NEW": "New constant",
+        "EXISTING": "Existing constant"
+      },
+      "NAME": "name",
+      "VALUE": "value",
+      "DEFAULT-TEXT-NAME": "Insert name here",
+      "VALUE-TYPE-DROPDOWN": {
+        "TITLE": "value type",
+        "STRING": "String",
+        "INTEGER-NUMBER": "Integer Number",
+        "REAL-NUMBER": "Real Number",
+        "BOOLEAN": "Boolean"
+      },
+      "DEFAULT-TEXT-VALUE": "Insert value here"
+    },
+    "PROPERTY": {
+      "TITLE": "property",
+      "ENT-TYPE": "ent type",
+      "PROPERTY": "property",
+      "DROPDOWN-DEFAULT": "None",
+      "FORM-COMPUTE": "form calculation",
+      "ENABLE-CONDITION": "enable condition",
+      "VALIDATION-CONDITION": "validation condition(s)",
+      "MANDATORY": "mandatory"
+    },
+    "FORM-COMPUTE": {
+      "TITLE": "form calculation",
+      "TERMS": "term(s)"
+    },
+    "ENABLE-CONDITION": {
+      "TITLE": "enable condition",
+      "CONDITION": "condition"
+    },
+    "VALIDATION-CONDITION": {
+      "TITLE": "validation condition(s)",
+      "CONDITION": "condition(s)"
+    },
+    "CONDITION-VALIDATION-CONDITION": {
+      "TITLE": "validation condition",
+      "EXTRA-FIELDS": {
+        "NOT": "Not",
+        "BELONGS-RANGE-TO": "to"
+      },
+      "VALIDATOR-WARNING": {
+        "HAS-CHARACTER": "Insert Character Here",
+        "HAS-WORD": "Insert Word Here",
+        "REGULAR-EXPRESSION": "Insert Regular Expression Here",
+        "CUSTOM-VALIDATION": "Insert Custom Validation Here"
+      },
+      "DROPDOWN": {
+        "REQUIRED": "Required",
+        "IS-NUMBER": "Is Number",
+        "IS-INTEGER": "Is Integer",
+        "IS-EMAIL": "Is Email",
+        "IS-URL": "Is URL",
+        "EQUAL-TO": "Equal to",
+        "LESS-EQUAL": "Less Equal",
+        "HIGHER-EQUAL": "Higher Equal",
+        "HIGHER-THAN": "Higher than",
+        "LESS-THAN": "Less than",
+        "MIN-LENGTH": "Min. Length",
+        "MAX-LENGTH": "Max. Length",
+        "BELONGS-RANGE": "Belongs Range",
+        "MIN-WORD-LENGTH": "Min. Word Length",
+        "MAX-WORD-LENGTH": "Max. Word Length",
+        "HAS-CHARACTER": "Has Character",
+        "HAS-WORD": "Has Word",
+        "REGULAR-EXPRESSION": "Regular Expression",
+        "CUSTOM-VALIDATION": "Custom Validation"
+      }
+    },
+    "PROPERTY-SINGLE": {
+      "TITLE": "property",
+      "SCOPE-DROPDOWN": {
+        "ENTITY": "Entity",
+        "PROCESS": "Process",
+        "GLOBAL": "Global"
+      },
+      "SCOPE": "scope",
+      "ENT-TYPE": "ent type",
+      "PROPERTY": "property",
+      "VALUE-TYPE": "value type"
+    },
+    "PROPERTY-VALUE": {
+      "WARNING": "Note: Please select an option on the left side",
+      "TITLE": "property value"
+    }
+  },
+  "FORM-MANAGEMENT": {
+    "FORM-NAME": "Form Name",
+    "FORM-EDITOR": "Form Editor",
+    "FORM-TRANSACTION-NAME": "Transaction Name",
+    "FORM-ACTION-NAME": "Action Name",
+    "FORM-UPDATED": "Updated at",
+    "FORM-CREATED": "Created at",
+    "FORM-ACTIONS": "Actions",
+    "FORM-EDIT": "Edit",
+    "FORM-DELETE": "Delete",
+    "FORM-ACTIONS-AVAILABLE": "Available Actions",
+    "FORM-CREATE": "Create Form",
+    "FORM-MANAGEMENT": "Forms Management",
+    "ASK-DELETE": "Are you sure you want to delete the form?",
+    "ERROR-SUCCESS": "Operation performed successfully!",
+    "ERROR-PROBLEM": "Operation not performed!",
+    "LABEL-NAME": "Name",
+    "PLACEHOLDER-NAME": "Enter the form name",
+    "LABEL-ACTION": "Action",
+    "PLACEHOLDER-ACTION": "Enter the action",
+    "PROCEED-BUTTON": "Proceed"
+  },
+  "FORMIO": {
+    "HEADER": "Form Editor",
+    "SAVE-BUTTON": "Save Form",
+    "ERROR-INSERTALLFIELDS": "You need to insert all fields!",
+    "ERROR-SUCCESS": "Operation performed successfully!",
+    "ASK-YOUSURE": "Are you sure, you want to save the form?",
+    "OPTION-TRUE": "True",
+    "OPTION-FALSE": "False",
+    "LABEL-NAME": "Name",
+    "LABEL-TYPE": "Type",
+    "SUBMIT-BUTTON": "Submit"
+  },
+  "FORM-RENDER": {
+    "FORM-NAME": "Form Name",
+    "FORM-EDITOR": "Form Editor",
+    "FORM-TRANSACTION-NAME": "Transaction Name",
+    "FORM-ACTION-NAME": "Action Name",
+    "FORM-UPDATED": "Updated at",
+    "FORM-CREATED": "Created at",
+    "FORM-ACTIONS": "Actions",
+    "FORM-RENDER-ACTION": "Render",
+    "FORM-ACTIONS-AVAILABLE": "Available Actions",
+    "FORM-RENDER": "Forms Render",
+    "ASK-RENDER": "Are you sure you want to render the form?",
+    "ERROR-SUCCESS": "Operation performed successfully!",
+    "ERROR-PROBLEM": "Operation not performed!",
+    "HEADER-RENDERED-FORM": "Rendered Form",
+    "BACK-BUTTON": "Go Back"
+  },
+  "TRANSLATOR": {
+    "FORMS": "Forms Translation",
+    "FORM-NAME": "Form Name",
+    "FORM-LANGUAGE-ID": "ID Language",
+    "FORM-TRANSACTION-NAME": "Transaction Name",
+    "FORM-ACTION-NAME": "Action Name",
+    "FORM-UPDATED": "Updated at",
+    "FORM-CREATED": "Created at",
+    "FORM-ACTIONS": "Actions",
+    "FORM-TRANSLATE-ACTION": "Translate",
+    "FORM-TRANSLATOR": "Forms Translation",
+    "FORM-NAME-NEW": "Name",
+    "PLACEHOLDER-NAME-NEW": "Enter the name for the new form",
+    "LABEL-LANGUAGE": "Language",
+    "PLACEHOLDER-LANGUAGE": "Select the language you wish to translate",
+    "PROCEED-BUTTON": "Proceed",
+    "ERROR-SUCCESS": "Operation performed successfully!",
+    "ERROR-PROBLEM": "Operation not performed!"
+  },
+  "BLOCKLY-ACTIONS-NOTIFICATIONS": {
+    "SUCCESS": {
+      "LOAD-XML": "Action Rule loaded successfully.",
+      "SAVE-AR": "Action Rule saved successfully.",
+      "LOAD-AR": "Existing Action Rules loaded successfully",
+      "LOAD-TEMPLATE-IN-BLOCK": "Template information updated successfully on the block."
+    },
+    "ERROR": {
+      "LOAD-XML": "Failed to load Action Rule.",
+      "SAVE-AR": "Failed to save Action Rule.",
+      "LOAD-AR": "Failed to load Existing Action Rules."
+    }
+  },
+  "TEMPLATE-EDITOR": {
+    "TITLE": "Templates Management",
+    "AVAILABLE-ACTIONS": "Available Actions",
+    "CREATE-TEMPLATE": "Create Template",
+    "TEMPLATES-MANAGEMENT": "Templates Management",
+    "TEMPLATE-TABLE": {
+      "NAME": "Name",
+      "TYPE": "Type",
+      "UPDATED-AT": "Updated At",
+      "CREATED-AT": "Created At",
+      "AVAILABLE-ACTIONS": "Available Actions",
+      "EDIT": "Edit",
+      "DELETE": "Delete"
+    },
+    "MODAL": {
+      "MODAL-TITLE": "Template Editor",
+      "NAME": "Name",
+      "NAME-PLACEHOLDER": "Insert the template name here.",
+      "NAME-INVALID": "Please choose a template name.",
+      "TYPE": "Type",
+      "TYPE-WINDOW": "Window",
+      "TYPE-NOTIFICATION": "Notification",
+      "TYPE-INVALID": "Please choose a template type.",
+      "WINDOW-HEADER": "Window Header",
+      "WINDOW-HEADER-PLACEHOLDER": "Insert the window header text here.",
+      "WINDOW-HEADER-INVALID": "Please choose the window header text.",
+      "WINDOW-BUTTON": "Window Button",
+      "WINDOW-BUTTON-PLACEHOLDER": "Insert the window button text here.",
+      "WINDOW-BUTTON-INVALID": "Please choose the window button text.",
+      "NOTIFICATION-CLASS": "Notification Class",
+      "NOTIFICATION-CLASS-SUCCESS": "Success",
+      "NOTIFICATION-CLASS-INFORMATION": "Information",
+      "NOTIFICATION-CLASS-WARNING": "Warning",
+      "NOTIFICATION-CLASS-ERROR": "Error",
+      "NOTIFICATION-CLASS-CUSTOM": "Custom",
+      "NOTIFICATION-CLASS-INVALID": "Please choose a notification class.",
+      "NOTIFICATION-TITLE": "Notification Title",
+      "NOTIFICATION-TITLE-PLACEHOLDER": "Insert the notification title text here.",
+      "NOTIFICATION-TITLE-INVALID": "Please choose a notification title.",
+      "NOTIFICATION-COLOUR": "Notification Colour",
+      "NOTIFICATION-COLOUR-INVALID": "Please choose a notification colour.",
+      "NOTIFICATION-COLOURS": {
+        "DARK-PINK": "dark pink",
+        "PINK": "pink",
+        "LIGHT-PINK": "light pink",
+        "PURPLE": "purple",
+        "LIGHT-PURPLE": "light purple",
+        "LIGHT-ORANGE": "light orange",
+        "DARK-BLUE": "dark blue",
+        "DARK-RED": "dark red",
+        "GREY": "grey"
+      },
+      "TEMPLATE-TEXT-DEFAULT": "Edit the text to be displayed here.",
+      "SAVE": "Save"
+    },
+    "ERROR": {
+      "TEMPLATE-INFORMATION": "Error getting template information.",
+      "CREATING": "Error creating the template. Please, try again.",
+      "UPDATING": "Error updating the template. Please, try again.",
+      "DELETING": "Error deleting the template. Please, try again."
+    },
+    "SUCCESS": {
+      "CREATING": "Template created successfully.",
+      "UPDATING": "Template updated successfully.",
+      "DELETING": "Template deleted successfully."
+    },
+    "WARNING": {
+      "TEMPLATE-USED-IN-AR": "This template is being used in an active Action Rule, it can't be deleted."
+    },
+    "DELETE-CONFIRMATION-MESSAGE": "Are you sure you want to delete this template?"
+  }
+}
+

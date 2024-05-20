@@ -1,0 +1,52 @@
+<div class="modal-header">
+    <h4 class="modal-title">Elementos BI</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input class="form-control" id="name" [(ngModel)]="biEngineData.name" type="text" placeholder="Introduza o nome da ferramenta BI">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <form>
+                    <div class="form-group">
+                        <fieldset class="form-group">
+                            <label>Imagem de pré-visualização</label>
+                            {{imageError}}
+                            <div class="custom-file fileInputProfileWrap">
+                                <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                                <div class="img-space">
+                                    <ng-container *ngIf="biEngineData.logo_preview?.length && !isImageSaved;">
+                                        <img [src]="biEngineData.logo_preview" />
+                                    </ng-container>
+                                    <ng-container *ngIf="!biEngineData.logo_preview?.length || isImageSaved; then thenTemplate2;">
+                                    </ng-container>
+                                    <ng-container *ngIf="!biEngineData.logo_preview?.length && !isImageSaved; then elseTemplate;">
+                                    </ng-container>
+                                    <ng-template #thenTemplate2>
+                                        <img [src]="cardImageBase64" />
+                                    </ng-template>
+                                    <ng-template #elseTemplate>
+                                        <img src="../../../../assets/img/Item_sem_imagem.png" class="img-responsive">
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a class="btn btn-danger" (click)="removeImage()" *ngIf="isImageSaved">Remover</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Guardar</button>
+</div>

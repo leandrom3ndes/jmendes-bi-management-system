@@ -1,0 +1,29 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="PUT" />
+  <option name="urlBase" value="http://localhost:8001" />
+  <option name="urlPath" value="/api/auth/documenttypes/8" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNmOTNjYWNlZDZlMTUxYzg3NzRlZTAxZDliMzIxNTBlY2U3NTdmYTNmY2NjNzQ3OGIzYjFkNTlmMWU3Y2MzOGNmZTJmMTExZmMzNDE0NTc0In0.eyJhdWQiOiI3IiwianRpIjoiM2Y5M2NhY2VkNmUxNTFjODc3NGVlMDFkOWIzMjE1MGVjZTc1N2ZhM2ZjY2M3NDc4YjNiMWQ1OWYxZTdjYzM4Y2ZlMmYxMTFmYzM0MTQ1NzQiLCJpYXQiOjE2MDA0MTc5MjgsIm5iZiI6MTYwMDQxNzkyOCwiZXhwIjoxNjMxOTUzOTI3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.rtrmsKds9nytk_APJA8OBzL5wjs2eVFECPKrflL2tFm8x9t-gbz0v9nPWtu9IeFdeQOTOMBmB6KUmISA0cYfa9ob7emrfrpMxutgXLBRfTK0vgoiSX59dy9i6FZBrKn2J-Ff_R9_pdb696yukPQnccSi_Ptd0roLgM0KmOShNBWQ7Nw8_3ezFV3As3vUWXMbckI5HLgB1cR2dFjW5_oWnk6uBRzHSxlxsjGbtUy8Iou7eorRjVDHowMKcydVM0hStPTlNUUJ1b2R1qemo8SjuEvXwpenEZZ62iL7Pq9yabovUITBEIRUWwi4Q5OONw2VsiaLr73WW8kHz0W3XXQe4dWuQ3Un2uguHwxXEUUHMLVJqnYNmj9zpCVFfDwbE4k-H1a699UzWzEA5HCrYCmlm2dOQqa5rDy6CO7BQGzm6V97PVKt8479zNUzg4g7Et5StPjJhxIQHQzBlOVEJJcc6nbDmQgF9Pzubz6KQq_37Gs0yUOc98yVytvq0t2zf5Hb-wPyyeetFyDQU6cPV_Na3LhxP24gt5NW8Mq-909vY1YOXqZ_Fv_P7XvnCdcH9ESQVprF0sGUtD234hiOI1Ucjw4CRiyM7re26PJMLq8Mb3VFaVb-BDcM6a6BXMBecZWEHc91VUcOwOyK5_N4zDHuIDRBsE70I1sChy6ll9R-ALY" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="{   &quot;delete_time_period&quot;: 0,   &quot;delete_time_unit&quot;: &quot;days&quot;,   &quot;label&quot;: &quot;whatever&quot;,   &quot;trash_time_period&quot;: 0,   &quot;trash_time_unit&quot;: &quot;days&quot; }" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

@@ -1,0 +1,110 @@
+
+<div class="modal-header">
+    <h4 class="modal-title">Elementos do Knowage</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Label</label>
+                <ng-select [items]="biKnowageApiData | async"
+                           placeholder="Selecione o rótulo"
+                           bindLabel="label"
+                           bindValue="label"
+                           [(ngModel)]="biKnowageData.label"
+                           (change)="onLabelChange(biKnowageData.label)"
+                    required>
+                    <ng-template ng-header-tmp>
+                        Rótulos
+                    </ng-template>
+                </ng-select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input class="form-control" id="name" [(ngModel)]="biKnowageData.name" type="text" placeholder="Introduzir o nome do BI Knowage">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <input class="form-control" id="description" [(ngModel)]="biKnowageData.description" type="text" placeholder="Introduzir a descrição do BI Knowage">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="type">Tipo</label>
+                <input class="form-control" id="type" [(ngModel)]="biKnowageData.type" type="text" placeholder="Introduzir o tipo do BI Knowage">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="role">Perfil</label>
+                <input class="form-control" id="role" [(ngModel)]="biKnowageData.role" type="text" placeholder="Introduzir o role do BI Knowage">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="dataset_label">Rótulo do conjunto de dados</label>
+                <input class="form-control" id="dataset_label" [(ngModel)]="biKnowageData.dataset_label" type="text" placeholder="Introduzir o label do dataset do BI Knowage">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <form>
+                    <div class="form-group">
+                        <fieldset class="form-group">
+                            <label>Imagem de pré-visualização</label>
+                            {{imageError}}
+                            <div class="custom-file fileInputProfileWrap">
+                                <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                                <div class="img-space">
+                                    <img [src]="biKnowageData.preview" *ngIf="biKnowageData.preview?.length || isImageSaved"/>
+                                    <ng-container *ngIf="!biKnowageData.preview?.length && !isImageSaved; then elseTemplate;"></ng-container>
+                                    <ng-template #elseTemplate>
+                                        <img src="../../../../assets/img/Item_sem_imagem.png" class="img-responsive">
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a class="btn btn-danger" (click)="removeImage()" *ngIf="isImageSaved || biKnowageData.preview?.length">Remover</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="form-check">
+        <label for="display_toolbar">
+            <input type="checkbox" id="display_toolbar" [(ngModel)]="biKnowageData.display_toolbar" /> Mostrar barra de ferramentas
+        </label>
+    </div>
+    <div class="form-check">
+        <label for="display_sliders">
+            <input type="checkbox" id="display_sliders" [(ngModel)]="biKnowageData.display_sliders" /> Mostrar deslizadores
+        </label>
+    </div>
+    <div class="form-check">
+        <label for="reset_parameters">
+            <input type="checkbox" id="reset_parameters" [(ngModel)]="biKnowageData.reset_parameters" /> Permitir eliminar parâmetros
+        </label>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Guardar</button>
+</div>

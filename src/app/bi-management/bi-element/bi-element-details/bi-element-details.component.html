@@ -1,0 +1,91 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biDashboard">Painel de controlo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="/biManagement/biElement">Elementos BI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElementCollection">Coleção</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biKnowage">Elementos do Knowage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biEngines">Ferramentas BI</a>
+    </li>
+</ul>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header" *ngFor="let biDetail of biElementDetailModel">
+                <i class="fa fa-align-justify"></i>{{ biDetail.name }} detalhes
+            </div>
+            <div class="card-body">
+                <div class="row" *ngFor="let biDetail of biElementDetailModel">
+                    <div class="col-sm-3">
+                        <img class="img-fluid img-thumbnail" [src]="biDetail.preview" alt="{{ biDetail.name }}"/>
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class="mb-3">{{ biDetail.name }}</h3>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Descrição</th>
+                                <td>{{ biDetail.description }}</td>
+                            </tr>
+                            <tr>
+                                <th>Tipo</th>
+                                <td>{{ biDetail.type_slug }}</td>
+                            </tr>
+                            <tr>
+                                <th>Ferramenta BI</th>
+                                <td>{{ biDetail.engine_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Data de criação</th>
+                                <td>{{ biDetail.created_at }}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- BiElement Modal -->
+                                    <div class="modal fade bd-modal-dashboards" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-xl d-flex justify-content-center" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{ biDetail.name }}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <iframe [src]="biDetail.embed" style="border:none; height:100vh; width:100%;"></iframe>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                        Visualizar
+                                    </button>
+
+                                </td>
+                                <td>
+                                    <div *ngIf="!collected; else inCollection">.
+                                        <button class="btn btn-danger" (click)="storeBiUserCollection(biElementid)"><i class="fa fa-heart"></i></button>
+                                    </div>
+                                    <ng-template #inCollection>
+                                        <button class="btn btn-secondary" [disabled]="disabled"><i class="fa fa-heart"></i></button>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+</div>

@@ -1,0 +1,23 @@
+{
+  "Page_Name": "Tipos de Processos",
+  "THEADER1" : "ID",
+  "THEADER2" : "Nome",
+  "THEADER3" : "Estado",
+  "THEADER4" : "Criado em",
+  "THEADER5" : "Actualizado em",
+  "THEADER6" : "Apagado em",
+  "THEADER7" : "Adicionar Novo Tipo de Processo",
+  "BTNTABLE1" : "Editar",
+  "BTNTABLE2" : "Histórico",
+  "BTNTABLE3" : "Apagar",
+  "SAVE_SUCCESS_MESSAGE" : "Inserido com sucesso",
+  "EDIT_FORM_NAME": "Detalhes do Tipo de Processo",
+  "ADD_FORM_NAME": "Adicionar um novo Tipo de Processo",
+  "INPUT_NAME" : "Nome",
+  "INPUT_STATE" : "Estado",
+  "INPUT_LANGUAGE" : "Idioma",
+  "INPUT_language_id" : "Selecionar o idioma",
+  "BTN1FORM" : "Guardar Alterações",
+  "BTNPAGINATION1" : "Próximo",
+  "BTNPAGINATION2" : "Anterior"
+}

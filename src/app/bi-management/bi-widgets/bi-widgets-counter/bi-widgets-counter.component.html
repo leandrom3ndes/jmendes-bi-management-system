@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-primary text-white mb-4">
+            <div class="card-body card-counter primary">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <span class="count-numbers">{{ biElementsCount }}</span>
+                <span class="count-name">Elementos BI</span>
+            </div>
+            <div class="card-footer primary d-flex align-items-center justify-content-between primary">
+                <a class="small text-white stretched-link" routerLink="/biManagement/BiElementManagement">Ver detalhes</a>
+                <div class="small text-white"><i class="fa fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-warning text-white mb-4">
+            <div class="card-body card-counter danger">
+                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                <span class="count-numbers">{{ biKnowageCount }}</span>
+                <span class="count-name">Elementos Knowage</span>
+            </div>
+            <div class="card-footer danger d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" routerLink="/biManagement/BiKnowageManagement">Ver detalhes</a>
+                <div class="small text-white"><i class="fa fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4" >
+            <div class="card-body card-counter info">
+                <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                <span class="count-numbers">{{ biElementTypesCount }}</span>
+                <span class="count-name">Tipos</span>
+            </div>
+            <div class="card-footer info d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" routerLink="/biManagement/BiElementTypeManagement">Ver detalhes</a>
+                <div class="small text-white"><i class="fa fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4">
+            <div class="card-body card-counter success">
+                <i class="fa fa-database"></i>
+                <span class="count-numbers">{{ biEnginesCount }}</span>
+                <span class="count-name">Ferramentas BI</span>
+            </div>
+            <div class="card-footer success d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" routerLink="/biManagement/BiEngineManagement">Ver detalhes</a>
+                <div class="small text-white"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

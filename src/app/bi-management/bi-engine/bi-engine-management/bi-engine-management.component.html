@@ -1,0 +1,100 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="/biManagement/biDashboard">Painel de controlo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElement">Elementos BI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElementCollection">Coleção</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biKnowage">Elementos do Knowage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biEngines">Ferramentas BI</a>
+    </li>
+</ul>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong>Acções disponíveis</strong>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                        <button class="btn btn-block btn-success" type="button" (click)="openModal()">
+                            Criar ferramenta BI
+                        </button>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i>Tabela de elementos BI
+            </div>
+            <div class="card-body">
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pré-visualização</th>
+                        <th>Nome</th>
+                        <th>Data de criação</th>
+                        <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngIf="biEngines?.length != 0">
+                    <tr *ngFor="let biEngine of biEngines">
+                        <td>{{ biEngine.id }}</td>
+                        <td>
+                            <img [src]="biEngine.logo_preview" alt="{{ biEngine.name }}" class="img-fluid"
+                                 style="display: block; margin: auto; width: 50%; height: 60px;"/>
+                        </td>
+                        <td>{{ biEngine.name }}</td>
+                        <td>{{ biEngine.created_at }}</td>
+                        <td>
+                            <li class="list-inline-item">
+                                <button class="btn btn-warning btn-sm rounded-0" type="button" (click)="openModal(biEngine)" data-toggle="tooltip"
+                                        data-placement="top" title="Edit"><i class="fa fa-edit"></i>
+                                </button>
+                            </li>
+                            <li class="list-inline-item">
+                                <button class="btn btn-danger btn-sm rounded-0" type="button"  (click)="deleteBiEngine( biEngine.id)" data-toggle="tooltip"
+                                        data-placement="top" title="Delete"><i class="fa fa-trash"></i>
+                                </button>
+                            </li>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody *ngIf="biEngines?.length == 0">
+                    <tr>
+                        <td colspan="5" class="no-data-available">A carregar ferramentas BI...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+</div>

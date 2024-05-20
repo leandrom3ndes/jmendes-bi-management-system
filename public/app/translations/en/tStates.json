@@ -1,0 +1,21 @@
+{
+  "Page_Name": "T States",
+  "THEADER1" : "ID",
+  "THEADER2" : "Name",
+  "THEADER3" : "Created_at",
+  "THEADER4" : "Updated_at",
+  "THEADER5" : "Deleted_at",
+  "THEADER6" : "Add New T State",
+  "BTNTABLE1" : "Edit",
+  "BTNTABLE2" : "History",
+  "BTNTABLE3" : "Delete",
+  "SAVE_SUCCESS_MESSAGE" : "Inserted successfully!!!",
+  "EDIT_FORM_NAME": "T State Details",
+  "ADD_FORM_NAME": "Add New T State",
+  "INPUT_NAME" : "Name",
+  "INPUT_LANGUAGE" : "Language",
+  "INPUT_language_id" : "Select the language",
+  "BTN1FORM" : "Save changes",
+  "BTNPAGINATION1" : "Next",
+  "BTNPAGINATION2" : "Prev"
+}

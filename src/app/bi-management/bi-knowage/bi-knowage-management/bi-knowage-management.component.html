@@ -1,0 +1,134 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="/biManagement/biDashboard">Painel de controlo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElement">Elementos BI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElementCollection">Coleção</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biKnowage">Elementos do Knowage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biEngines">Ferramentas BI</a>
+    </li>
+</ul>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong>Acções disponíveis</strong>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0" *ngIf="!biKnowageSession || biKnowageSession === ''; else noKnowage2Session">
+                        <button class="btn btn-block btn-success" type="button" routerLink="/biManagement/BiKnowageLogin">
+                            Adicionar elementos do Knowage
+                        </button>
+                    </div>
+                    <ng-template #noKnowage2Session>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button class="btn btn-block btn-success" type="button" (click)="openModal()">
+                                Adicionar elementos do Knowage
+                            </button>
+                        </div>
+                    </ng-template>
+                    <!--<div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0" *ngIf="biKnowageSession === ''; else noKnowageSession">
+                        <button class="btn btn-block btn-success" type="button" routerLink="/biManagement/BiKnowageLogin">
+                            Ver BI Knowage documentos
+                        </button>
+                    </div>-->
+                    <ng-template #noKnowageSession>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button class="btn btn-block btn-success" type="button" (click)="getBiKnowageDocumets()">
+                                Ver os documentos do Knowage
+                            </button>
+                        </div>
+                    </ng-template>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i>Tabela elementos do Knowage
+            </div>
+            <div class="card-body">
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Rótulo</th>
+                        <th>Pré-visualização</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Tipo</th>
+                        <th>Perfil</th>
+                        <th>Rótulo do conjunto de dados</th>
+                        <th>Data de criação</th>
+                        <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngIf="biKnowageDetails?.length != 0">
+                    <tr *ngFor="let biKnowDetail of biKnowageDetails">
+                        <td>{{ biKnowDetail.id }}</td>
+                        <td>{{ biKnowDetail.label }}</td>
+                        <td>
+                            <img [src]="biKnowDetail.preview" alt="{{ biKnowDetail.name }}" class="img-fluid"
+                                 style="display: block; margin: auto; width: 100%; height: 60px;"/>
+                        </td>
+                        <td>{{ biKnowDetail.name }}</td>
+                        <td>{{ biKnowDetail.description }}</td>
+                        <td>{{ biKnowDetail.type }}</td>
+                        <td>{{ biKnowDetail.role }}</td>
+                        <td>{{ biKnowDetail.dataset_label }}</td>
+                        <td>{{ biKnowDetail.created_at }}</td>
+                        <td>
+                            <li class="list-inline-item">
+                                <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                        routerLink="/biManagement/biKnowageDetails/{{ biKnowDetail.id }}" data-placement="top" title="Add"><i class="fa fa-eye"></i>
+                                </button>
+                            </li>
+                            <li class="list-inline-item">
+                                <button class="btn btn-warning btn-sm rounded-0" type="button" (click)="openModal( biKnowDetail )" data-toggle="tooltip"
+                                        data-placement="top" title="Edit"><i class="fa fa-edit"></i>
+                                </button>
+                            </li>
+                            <li class="list-inline-item">
+                                <button class="btn btn-danger btn-sm rounded-0" type="button"  (click)="deleteBiKnowage( biKnowDetail.id )" data-toggle="tooltip"
+                                        data-placement="top" title="Delete"><i class="fa fa-trash"></i>
+                                </button>
+                            </li>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody *ngIf="biKnowageDetails?.length == 0">
+                    <tr>
+                        <td colspan="10" class="no-data-available">A carregar BI Knowage...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+</div>
+
+

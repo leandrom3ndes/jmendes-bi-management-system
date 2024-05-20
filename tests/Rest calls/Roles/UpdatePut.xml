@@ -1,0 +1,29 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="PUT" />
+  <option name="urlBase" value="http://localhost:8001" />
+  <option name="urlPath" value="api/auth/roles/3" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRkYjkzOGIxM2Y3NzBlOGY0MDg4YWUzZjNhYzM1NThmM2M3MWU1MGM1NDRmZTE3MGQ2YWFjOWIxMjkyN2FjOTVkNjlmYzJiMDY0Zjc4ODBiIn0.eyJhdWQiOiIxIiwianRpIjoiNGRiOTM4YjEzZjc3MGU4ZjQwODhhZTNmM2FjMzU1OGYzYzcxZTUwYzU0NGZlMTcwZDZhYWM5YjEyOTI3YWM5NWQ2OWZjMmIwNjRmNzg4MGIiLCJpYXQiOjE1ODMzMzkwNTQsIm5iZiI6MTU4MzMzOTA1NCwiZXhwIjoxNjE0ODc1MDU0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.0v738tSCnNi7US2VHRxXaG4AqqNlC1TiGmRLjNHNdCAwDW4oAJipEZYEEC7035aFH86t0IniYPzXTe8QJQIVOIGnF-bJPCM9-splxtLv7nJU-7mkeN9PMQLDYBt1VsfD9PFwyUvAxEwSySu8KtxLZzVoOiCV43Bp-WVN5RNhV-zk3s_414uFAC1FCZHk3ggSRWVJjU5IEBUI7KqwJt_VuLoz-cBTYyrnLdcE_rMe98NsFxSC8p7E7jnr_xj3KHjj_vyyuP2ATdHuIzPE_X1ejKYS-544iESUu4O8Yz0Lv1LnJnlXZqMGHwNcB_ngMttMdOfkdxvBdcbjU6WEey195-RoORYpCx5gXuqtw7Nq4hyFyKQ98eXv8LwPgM33NhX3c1GqNLZnJc8Ub8E4kP6XI4KOcKtJfs0QEIN0VFpyTfHqZS_NuEb4mIAF612DHFSgz_5wVj4Mk29PUHUnCet1WwctwPogmeKvJf_Fyn3z54dBLdRysf97S8Sbpe486PrskKLCPvPqtmcMCIpnG1Kqw1sgh-cI1RcaDRRLQyzOM7SxDBiWRk7Zw8e_aCTkoq8x1lsbTRbQYzF_qOFbVYLyJn3Rv-aUM_7k6A6nlaQ6qWpYlqojvLQeAoz-wsBZFM5HBkiQFzUyywk_8qizC4vvPowWvT18nalZWfmgF4VAmnM" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="{&quot;id&quot;:3,&quot;updated_by&quot;:null,&quot;deleted_by&quot;:null,&quot;created_at&quot;:&quot;2020-03-04 10:41:18&quot;,&quot;updated_at&quot;:&quot;2020-03-04 10:41:18&quot;,&quot;deleted_at&quot;:null,&quot;name&quot;:&quot;whatever a&quot;,&quot;role_name&quot;:[{&quot;role_id&quot;:3,&quot;language_id&quot;:2,&quot;name&quot;:&quot;whatever&quot;,&quot;updated_by&quot;:2,&quot;deleted_by&quot;:null,&quot;created_at&quot;:&quot;2020-03-04 10:41:18&quot;,&quot;updated_at&quot;:&quot;2020-03-04 10:41:18&quot;,&quot;deleted_at&quot;:null}]}" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

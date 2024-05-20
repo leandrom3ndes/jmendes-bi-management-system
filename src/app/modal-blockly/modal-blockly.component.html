@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h4 class="modal-title">Load Action Rule</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">X</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="actionRule">Select below the Action Rule which you'd like to load on Blockly Workspace!</label>
+        <select class="form-control" id="actionRule" [(ngModel)]="xmlToLoad">
+          <option value= '' selected="selected" >
+            Select an option below...
+          </option>
+          <option *ngFor="let actionRule of ActionRules" value= {{actionRule.blockly_xml}} >
+            Transaction Type: {{actionRule.transaction_type_name}}      Transaction State: {{actionRule.t_state_name}}
+          </option>
+        </select>
+        <div class="preview" *ngIf="xmlToLoad !== ''">
+            <label for="actionRulePreview">Preview:</label>
+            <br>
+            <img id="actionRulePreview" [src]="getARPreview()" alt="Selected AR preview" style="max-height: 90%; max-width: 90%;" >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="passBack()">Load</button>
+</div>

@@ -1,0 +1,603 @@
+{
+  "BLOCKLY-PAGE": {
+    "TITLE": "Gestão de Regras de Ação",
+    "ACTIONS": "Ações Possíveis",
+    "SHOW-CODE": "Mostrar Código",
+    "SHOW-XML-BLOCKLY": "Mostrar XML Blockly",
+    "SAVE-TO-DB": "Guardar Regra Ação na BD",
+    "LOAD-AR": "Carregar Regra Ação",
+    "GENERATOR": "Gerador Blockly"
+  },
+
+  "BLOCKLY-CATEGORY": {
+    "GENERAL": "Genal",
+    "EVALUATE": "Ações",
+    "COMPUTE": "Computação",
+    "SPECIFY-DATA": "Especificação de Dados",
+    "PROPERTIES": "Propriedades"
+  },
+
+  "BLOCKLY-BLOCKS": {
+    "WHEN-IS-DO": {
+      "WHEN": "quando",
+      "IS": "é",
+      "ACTIONS": "ações"
+    },
+    "ACTION": {
+      "TITLE": "ação",
+      "DROPDOWN": {
+        "NONE": "Nenhum",
+        "ASSIGN-EXPRESSION": {
+          "TITLE": "atribuir expressão"
+        },
+        "READ-VALUE": {
+          "TITLE": "ler valor"
+        },
+        "PRODUCE-DOCUMENT": {
+          "TITLE": "produzir documento"
+        },
+        "USER-OUTPUT": {
+          "TITLE": "saída para utilizador",
+          "DROPDOWN": {
+            "NEW": "criar novo texto",
+            "EXISTING": "usar texto existente"
+          },
+          "TEMPLATE-NAME": "nome",
+          "DEFAULT-TEMPLATE-NAME-TEXT": "insira o nome do template aqui",
+          "TEXT-NOT-EDITABLE": "Texto Personalizado",
+          "TYPE": {
+            "TITLE": "tipo",
+            "MODAL": {
+              "TITLE": "janela",
+              "HEADER": "cabeçalho",
+              "DEFAULT-HEADER": "informação",
+              "BUTTON": "botão",
+              "DEFAULT-BUTTON": "continuar"
+            },
+            "TOAST": {
+              "TITLE": "notificação",
+              "CLASS-DROPDOWN": {
+                "SUCCESS": "sucesso",
+                "INFORMATION": "informação",
+                "WARNING": "aviso",
+                "ERROR": "erro",
+                "CUSTOM": "personalizada"
+              },
+              "CLASS": "classe",
+              "COLOUR": "cor",
+              "CUSTOM-TITLE": "título",
+              "DEFAULT-CUSTOM-TITLE": "notificação",
+              "CUSTOM-COLOURS": {
+                "DARK-PINK": "rosa escuro",
+                "PINK": "rosa",
+                "LIGHT-PINK": "rosa claro",
+                "PURPLE": "roxo",
+                "LIGHT-PURPLE": "roxo escuro",
+                "LIGHT-ORANGE": "laranja claro",
+                "DARK-BLUE": "azul escuro",
+                "DARK-RED": "vermelho escuro",
+                "GREY": "cinzento"
+              }
+            }
+          },
+          "DEFAULT-TEXT": "insira o novo texto aqui",
+          "TEMPLATE-EDITOR-TEXT": "editor do template",
+          "TEMPLATE-EDITOR-BUTTON": "abrir"
+        },
+        "EXTERNAL-CALL": {
+          "TITLE": "chamada externa"
+        },
+        "CAUSAL-LINK": {
+          "TITLE": "ligação causal",
+          "MUST-BE": "tem de ser",
+          "MIN": "min: ",
+          "MAX": "max: "
+        },
+        "USER-INPUT": {
+          "TITLE": "inserção pelo utilizador",
+          "ACTION-NAME": "nome ação",
+          "ACTION-NAME-DEFAULT-TEXT": "insira o nome da ação aqui",
+          "PROPERTIES": "propriedade(s)"
+        }
+      }
+    },
+    "IF_THEN": {
+      "IF": "se",
+      "THEN": "então",
+      "ELSE": "senão"
+    },
+    "WHILE": {
+      "WHILE": "enquanto",
+      "DO": "faz"
+    },
+    "CONDITION": {
+      "TITLE": "condição",
+      "TERMS": "termo(s)",
+      "DROPDOWN": {
+        "IS-TRUE": "É verdade",
+        "NOT": "Negação",
+        "AND": "E",
+        "OR": "Ou"
+      }
+    },
+    "COMP-EVALUATED-EXPRESSION": {
+      "TITLE": "expressão avaliada pelo computador",
+      "OPERATOR": "operador"
+    },
+    "USER-EVALUATED-EXPRESSION": {
+      "TITLE": "expressão avaliada pelo utilizador",
+      "DROPDOWN": {
+        "NEW": "Nova expressão",
+        "EXISTING": "Expressão existente"
+      },
+      "DEFAULT-TEXT": "Insira o novo texto da expressão aqui"
+    },
+    "COMPUTE-EXPRESSION": {
+      "TITLE": "expressão computação",
+      "TERMS": "termo(s)"
+    },
+    "QUERY": {
+      "TITLE": "query",
+      "DROPDOWN-DEFAULT": "Nenhum"
+    },
+    "VALUE": {
+      "TITLE": "valor",
+      "DEFAULT-VALUE": "Insira valor aqui",
+      "VALUE-TYPE-DROPDOWN": {
+        "TITLE": "tipo valor",
+        "STRING": "String",
+        "INTEGER-NUMBER": "Número Inteiro",
+        "REAL-NUMBER": "Número Real",
+        "BOOLEAN": "Boleano"
+      }
+    },
+    "CONSTANT": {
+      "TITLE": "constante",
+      "DROPDOWN": {
+        "NEW": "Nova constante",
+        "EXISTING": "Constante Existente"
+      },
+      "NAME": "nome",
+      "VALUE": "valor",
+      "DEFAULT-TEXT-NAME": "Insira nome aqui",
+      "VALUE-TYPE-DROPDOWN": {
+        "TITLE": "tipo valor",
+        "STRING": "String",
+        "INTEGER-NNUMBER": "Inteiro",
+        "FLOAT-NUMBER": "Float",
+        "BOOLEAN": "Boleano"
+      },
+      "DEFAULT-TEXT-VALUE": "Insira valor aqui"
+    },
+    "PROPERTY": {
+      "TITLE": "propriedade",
+      "ENT-TYPE": "tipo entidade",
+      "PROPERTY": "propriedade",
+      "DROPDOWN-DEFAULT": "Nenhum",
+      "FORM-COMPUTE": "cálculo em formulário",
+      "ENABLE-CONDITION": "condição habilitação",
+      "VALIDATION-CONDITION": "condição(ões) validação",
+      "MANDATORY": "obrigatório"
+    },
+    "FORM-COMPUTE": {
+      "TITLE": "cálculo em formulário",
+      "TERMS": "termo(s)"
+    },
+    "ENABLE-CONDITION": {
+      "TITLE": "condição habilitação",
+      "CONDITION": "condição"
+    },
+    "VALIDATION-CONDITION": {
+      "TITLE": "condição(ões) validação",
+      "CONDITION": "condição(ões)"
+    },
+    "CONDITION-VALIDATION-CONDITION": {
+      "TITLE": "condição validação",
+      "EXTRA-FIELDS": {
+        "NOT": "Negação",
+        "BELONGS-RANGE-TO": "até"
+      },
+      "VALIDATOR-WARNING": {
+        "HAS-CHARACTER": "Insira caráter aqui",
+        "HAS-WORD": "Insira palavra aqui",
+        "REGULAR-EXPRESSION": "Insira Expressão Regular aqui",
+        "CUSTOM-VALIDATION": "Insira Validação Personalizada aqui"
+      },
+      "DROPDOWN": {
+        "REQUIRED": "Obrigatório",
+        "IS-NUMBER": "É Número",
+        "IS-INTEGER": "É Inteiro",
+        "IS-EMAIL": "É Email",
+        "IS-URL": "É URL",
+        "EQUAL-TO": "Igual a",
+        "LESS-EQUAL": "Menor ou Igual",
+        "HIGHER-EQUAL": "Maior ou Igual",
+        "HIGHER-THAN": "Maior que",
+        "LESS-THAN": "Menor que",
+        "MIN-LENGTH": "Comprimento Mínimo",
+        "MAX-LENGTH": "Comprimento Máximo",
+        "BELONGS-RANGE": "Pertence Intervalo",
+        "MIN-WORD-LENGTH": "Comprimento Mínimo Palavra",
+        "MAX-WORD-LENGTH": "Comprimento Máximo Palavra",
+        "HAS-CHARACTER": "Tem Caráter",
+        "HAS-WORD": "Tem Palavra",
+        "REGULAR-EXPRESSION": "Expressão Regular",
+        "CUSTOM-VALIDATION": "Validação Personalizada"
+      }
+    },
+    "PROPERTY-SINGLE": {
+      "TITLE": "propriedade",
+      "SCOPE-DROPDOWN": {
+        "ENTITY": "Entidade",
+        "PROCESS": "Processo",
+        "GLOBAL": "Global"
+      },
+      "SCOPE": "âmbito",
+      "ENT-TYPE": "tipo entidade",
+      "PROPERTY": "propriedade",
+      "VALUE-TYPE": "tipo de valor"
+    },
+    "PROPERTY-VALUE": {
+      "WARNING": "Nota: Por favor selecione uma opção na esquerda",
+      "TITLE": "valor propriedade"
+    }
+  },
+  "FORM-MANAGEMENT": {
+    "FORM-NAME": "Nome Formulário",
+    "FORM-EDITOR": "Editor de Formulário",
+    "FORM-TRANSACTION-NAME": "Nome Transação",
+    "FORM-ACTION-NAME": "Nome Ação",
+    "FORM-UPDATED": "Atualizado a",
+    "FORM-CREATED": "Criado a",
+    "FORM-ACTIONS": "Ações",
+    "FORM-EDIT": "Editar",
+    "FORM-DELETE": "Apagar",
+    "FORM-ACTIONS-AVAILABLE": "Ações Possíveis",
+    "FORM-CREATE": "Criar Formulário",
+    "FORM-MANAGEMENT": "Gestão de formulários",
+    "ASK-DELETE": "Tem a certeza que pretende apagar o formulário?",
+    "ERROR-SUCCESS": "Operação realizada com sucesso!",
+    "ERROR-PROBLEM": "Operação não realizada!",
+    "LABEL-NAME": "Nome",
+    "PLACEHOLDER-NAME": "Introduza o nome do formulário",
+    "LABEL-ACTION": "Ação",
+    "PLACEHOLDER-ACTION": "Introduza a ação",
+    "PROCEED-BUTTON": "Proceder"
+  },
+  "FORMIO": {
+    "HEADER": "Editor de formulário",
+    "SAVE-BUTTON": "Gravar Formulário",
+    "ERROR-INSERTALLFIELDS":  "Precisa de preencher todos os campos!",
+    "ERROR-SUCCESS": "Operação realizada com sucesso!",
+    "ASK-YOUSURE": "Tem a certeza que deseja gravar o formulário?",
+    "OPTION-TRUE": "Verdadeiro",
+    "OPTION-FALSE": "Falso",
+    "LABEL-NAME": "Nome",
+    "LABEL-TYPE": "Tipo",
+    "SUBMIT-BUTTON": "Enviar"
+  },
+  "FORM-RENDER": {
+    "FORM-NAME": "Nome Formulário",
+    "FORM-EDITOR": "Editor de Formulário",
+    "FORM-TRANSACTION-NAME": "Nome Transação",
+    "FORM-ACTION-NAME": "Nome Ação",
+    "FORM-UPDATED": "Atualizado a",
+    "FORM-CREATED": "Criado a",
+    "FORM-ACTIONS": "Ações",
+    "FORM-RENDER-ACTION": "Renderizar",
+    "FORM-ACTIONS-AVAILABLE": "Ações Possíveis",
+    "FORM-RENDER": "Renderizador de formulários",
+    "ASK-RENDER": "Tem a certeza que pretende renderizar o formulário?",
+    "ERROR-SUCCESS": "Operação realizada com sucesso!",
+    "ERROR-PROBLEM": "Operação não realizada!",
+    "HEADER-RENDERED-FORM": "Formulário Renderizado",
+    "BACK-BUTTON": "Voltar"
+  },
+  "TRANSLATOR": {
+    "FORMS": "Tradução de Formulários",
+    "FORM-NAME": "Nome Formulário",
+    "FORM-LANGUAGE-ID": "ID Lingua",
+    "FORM-TRANSACTION-NAME": "Nome Transação",
+    "FORM-ACTION-NAME": "Nome Ação",
+    "FORM-UPDATED": "Atualizado a",
+    "FORM-CREATED": "Criado a",
+    "FORM-ACTIONS": "Ações",
+    "FORM-TRANSLATE-ACTION": "Traduzir",
+    "FORM-TRANSLATOR": "Tradução de Formulários",
+    "FORM-NAME-NEW": "Nome",
+    "PLACEHOLDER-NAME-NEW": "Introduza o nome para o novo formulário",
+    "LABEL-LANGUAGE": "Língua",
+    "PLACEHOLDER-LANGUAGE": "Selecione a linguagem para traduzir",
+    "PROCEED-BUTTON": "Avançar",
+    "ERROR-SUCCESS": "Operação feita com sucesso!",
+    "ERROR-PROBLEM": "Operação não realizada!"
+  },
+  "BLOCKLY-ACTIONS-NOTIFICATIONS": {
+    "SUCCESS": {
+      "LOAD-XML": "Regra Ação carregada com sucesso.",
+      "SAVE-AR": "Regra Ação guardada com sucesso.",
+      "LOAD-AR": "Regras Ação existentes carregadas com sucesso.",
+      "LOAD-TEMPLATE-IN-BLOCK": "Informação do template atualizada com sucesso no bloco."
+    },
+    "ERROR": {
+      "LOAD-XML": "Ocorreu uma falha ao carregar a Regra Ação.",
+      "SAVE-AR": "Ocorreu uma falha ao guardar a Regera Ação.",
+      "LOAD-AR": "Ocorreu uma falha ao carregar as Regras de Ação"
+    }
+  },
+  "TEMPLATE-EDITOR": {
+    "TITLE": "Gestão de Templates",
+    "AVAILABLE-ACTIONS": "Ações Disponíveis",
+    "CREATE-TEMPLATE": "Criar Template",
+    "TEMPLATES-MANAGEMENT": "Gestão de Templates",
+    "TEMPLATE-TABLE": {
+      "NAME": "Nome",
+      "TYPE": "Tipo",
+      "UPDATED-AT": "Atualizado a",
+      "CREATED-AT": "Criado a",
+      "AVAILABLE-ACTIONS": "Ações Disponíveis",
+      "EDIT": "Editar",
+      "DELETE": "Apagar"
+    },
+    "MODAL": {
+      "MODAL-TITLE": "Editor de Templates",
+      "NAME": "Nome",
+      "NAME-PLACEHOLDER": "Insira o nome do template aqui.",
+      "NAME-INVALID": "Por favor, insira um nome para o template.",
+      "TYPE": "Tipo",
+      "TYPE-WINDOW": "Janela",
+      "TYPE-NOTIFICATION": "Notificação",
+      "TYPE-INVALID": "Por favor, escolha um tipo de template.",
+      "WINDOW-HEADER": "Cabeçalho da Janela",
+      "WINDOW-HEADER-PLACEHOLDER": "Insira o texto do cabeçalho da janela aqui.",
+      "WINDOW-HEADER-INVALID": "Por favor, insira um texto para o cabeçalho da janela.",
+      "WINDOW-BUTTON": "Botão da Janela",
+      "WINDOW-BUTTON-PLACEHOLDER": "Insira o texto do botão da janela aqui.",
+      "WINDOW-BUTTON-INVALID": "Por favor, insira um texto para o botão da janela.",
+      "NOTIFICATION-CLASS": "Classe da Notificação",
+      "NOTIFICATION-CLASS-SUCCESS": "Sucesso",
+      "NOTIFICATION-CLASS-INFORMATION": "Informação",
+      "NOTIFICATION-CLASS-WARNING": "Aviso",
+      "NOTIFICATION-CLASS-ERROR": "Erro",
+      "NOTIFICATION-CLASS-CUSTOM": "Personalizado",
+      "NOTIFICATION-CLASS-INVALID": "Por favor, escolha uma classe da notificação.",
+      "NOTIFICATION-TITLE": "Título da Notificação",
+      "NOTIFICATION-TITLE-PLACEHOLDER": "Insira o texto do título da notificação aqui.",
+      "NOTIFICATION-TITLE-INVALID": "Por favor, insira um texto para o título da notificação.",
+      "NOTIFICATION-COLOUR": "Cor da Notificação",
+      "NOTIFICATION-COLOUR-INVALID": "Por favor, escolha uma cor para a notificação.",
+      "NOTIFICATION-COLOURS": {
+        "DARK-PINK": "rosa escuro",
+        "PINK": "rosa",
+        "LIGHT-PINK": "rosa claro",
+        "PURPLE": "roxo",
+        "LIGHT-PURPLE": "roxo escuro",
+        "LIGHT-ORANGE": "laranja claro",
+        "DARK-BLUE": "azul escuro",
+        "DARK-RED": "vermelho escuro",
+        "GREY": "cinzento"
+      },
+      "TEMPLATE-TEXT-DEFAULT": "Edite o texto a ser apresentado aqui.",
+      "SAVE": "Guardar"
+    },
+    "ERROR": {
+      "TEMPLATE-INFORMATION": "Ocorreu um erro a obter a informação do template.",
+      "CREATING": "Ocorreu um erro ao criar o template. Por favor, tente novamente.",
+      "UPDATING": "Ocorreu um erro ao atualizar o template. Por favor, tente novamente.",
+      "DELETING": "Ocorreu um erro ao apagar o template. Por favor, tente novamente."
+    },
+    "SUCCESS": {
+      "CREATING": "Template criado com sucesso.",
+      "UPDATING": "Template atualizado com sucesso.",
+      "DELETING": "Template apagado com sucesso."
+    },
+    "WARNING": {
+      "TEMPLATE-USED-IN-AR": "Este template está a ser utilizado numa Regra de Ação ativa, não pode ser eliminado."
+    },
+    "DELETE-CONFIRMATION-MESSAGE": "Tem a certeza que deseja apagar este template?"
+  },
+    "emptyTable": "Não foi encontrado nenhum registo",
+    "loadingRecords": "A carregar...",
+    "processing": "A processar...",
+    "lengthMenu": "Mostrar _MENU_ registos",
+    "zeroRecords": "Não foram encontrados resultados",
+    "search": "Procurar:",
+    "paginate": {
+        "first": "Primeiro",
+        "previous": "Anterior",
+        "next": "Seguinte",
+        "last": "Último"
+    },
+    "aria": {
+        "sortAscending": ": Ordenar colunas de forma ascendente",
+        "sortDescending": ": Ordenar colunas de forma descendente"
+    },
+    "autoFill": {
+        "cancel": "cancelar",
+        "fill": "preencher",
+        "fillHorizontal": "preencher células na horizontal",
+        "fillVertical": "preencher células na vertical"
+    },
+    "buttons": {
+        "selectAll": "Selecionar tudo",
+        "selectNone": "Remover seleção",
+        "collection": "Coleção",
+        "colvis": "Visibilidade de colunas",
+        "colvisRestore": "Restaurar visibilidade",
+        "copy": "Copiar",
+        "copySuccess": {
+            "1": "Uma linha copiada para a área de transferência",
+            "_": "%ds linhas copiadas para a área de transferência"
+        },
+        "copyTitle": "Copiar para a área de transferência",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Mostrar todas as linhas",
+            "_": "Mostrar %d linhas"
+        },
+        "pdf": "PDF",
+        "print": "Imprimir",
+        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clique nesta mensagem ou pressione ESC."
+    },
+    "decimal": ",",
+    "infoFiltered": "(filtrado de _MAX_ registos)",
+    "infoThousands": ".",
+    "searchBuilder": {
+        "add": "+",
+        "button": {
+            "0": "Consulta dinâmica",
+            "_": "Consulta dinâmica (%d)"
+        },
+        "clearAll": "Limpar tudo",
+        "delete": "x",
+        "condition": "2- Selecione uma condição",
+        "conditions": {
+            "date": {
+                "after": "Depois",
+                "before": "Antes",
+                "between": "Entre",
+                "empty": "Vazio",
+                "equals": "Igual",
+                "not": "Diferente",
+                "notBetween": "Não está entre",
+                "notEmpty": "Não está vazio"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Vazio",
+                "equals": "Igual",
+                "gt": "Maior que",
+                "gte": "Maior ou igual a",
+                "lt": "Menor que",
+                "lte": "Menor ou igual a",
+                "not": "Diferente",
+                "notBetween": "Não está entre",
+                "notEmpty": "Não está vazio"
+            },
+            "string": {
+                "contains": "Contém",
+                "notContains": "Não contém",
+                "empty": "Vazio",
+                "endsWith": "Termina em",
+                "notEndsWith": "Não termina em",
+                "equals": "Igual",
+                "not": "Diferente",
+                "notEmpty": "Não está vazio",
+                "startsWith": "Começa em",
+                "notStartsWith": "Não começa em"
+            },
+            "array": {
+                "equals": "Igual",
+                "empty": "Vazio",
+                "contains": "Contém",
+                "not": "Diferente",
+                "notEmpty": "Não está vazio",
+                "without": "Não contém"
+            }
+        },
+        "data": "1- Selecione uma coluna",
+        "deleteTitle": "Excluir condição de filtragem",
+        "logicAnd": "E",
+        "logicOr": "Ou",
+        "title": {
+            "0": "Consulta dinâmica",
+            "_": "Consulta dinâmica (%d)"
+        },
+        "value": "3- Introduza uma opção",
+        "leftTitle": "Excluir condição",
+        "rightTitle": "Incluir condição"
+    },
+    "searchPanes": {
+        "clearMessage": "<i class='fa fa-eraser' aria-hidden='true'></i>",
+        "showMessage": "<i class='fa fa-eye' aria-hidden='true'></i>",
+        "collapseMessage": "<i class='fa fa-eye-slash' aria-hidden='true'></i>",
+        "collapse": {
+            "0": "Painéis de pesquisa",
+            "_": "Painéis de pesquisa (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Sem painéis de pesquisa",
+        "loadMessage": "A carregar opções de filtragem...",
+        "title": "Filtros Ativos: %d"
+    },
+    "select": {
+        "rows": {
+            "1": "%d registo seleccionado",
+            "_": "%d registos seleccionados",
+            "0": "(Clique num registo para selecionar)"
+        }
+    },
+    "thousands": ".",
+    "editor": {
+        "close": "Fechar",
+        "create": {
+            "button": "Novo",
+            "title": "Criar novo registro",
+            "submit": "Criar"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar registro",
+            "submit": "Atualizar"
+        },
+        "remove": {
+            "button": "Remover",
+            "title": "Remover",
+            "submit": "Remover",
+            "confirm": {
+                "_": "Tem certeza que quer apagar %d entradas?",
+                "1": "Tem certeza que quer apagar esta entrada?"
+            }
+        },
+        "multi": {
+            "title": "Multiplos valores",
+            "restore": "Desfazer alterações",
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens nesta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão os seus valores individuais.",
+            "noMulti": "Este campo pode ser editado individualmente mas não pode ser editado em grupo"
+        },
+        "error": {
+            "system": "Ocorreu um erro no sistema."
+        }
+    },
+    "info": "Mostrar _START_ - _END_ de _TOTAL_ registos",
+    "infoEmpty": "Mostrar 0 - 0 de 0 registos",
+    "datetime": {
+        "previous": "anterior",
+        "next": "próximo",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos",
+        "unknown": "desconhecido",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "weekdays": [
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb",
+            "Dom"
+        ],
+        "months": [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
+        ]
+    }
+
+
+}

@@ -1,0 +1,57 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biDashboard">Painel de controlo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="/biManagement/biElement">Elementos BI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElementCollection">Coleção</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biKnowage">Elementos do Knowage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biEngines">Ferramentas BI</a>
+    </li>
+</ul>
+
+<div class="row">
+    <div class="input-group mb-5 col-12">
+        <input class="form-control form-control-lg" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Pesquisar por título e descrição">
+        <div class="input-group-append">
+            <button class="btn btn-danger btn-lg" type="button" >Pesquisar</button>
+        </div>
+    </div>
+</div>
+
+<div class="row" >
+    <div class="col-md-4" *ngFor="let biElText of allBiElementsText | slice: (page-1) * pageSize : page * pageSize | filter:searchText">
+        <div>
+            <div class="card mb-4 shadow-sm" >
+                <img [src]="biElText.preview" alt="{{ biElText.name }}" class="img-fluid" style="display: block;margin-left: auto;margin-right: auto; width: 100%; height: 160px;"/>
+                <div class="card-body" >
+                    <h4><a routerLink="/biManagement/biElementDetails/{{ biElText.id }}">{{ biElText.name }}</a></h4>
+                    <p class="card-text">{{ biElText.description }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button class="btn btn-primary" routerLink="/biManagement/biElementDetails/{{ biElText.id }}">
+                                <i class="fa fa-eye"></i> Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngb-pagination
+    class="d-flex justify-content-end"
+    [collectionSize]="allBiElementsText.length"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [maxSize]="5"
+    [rotate]="true"
+    [ellipses]="true"
+    [boundaryLinks]="true"
+></ngb-pagination>

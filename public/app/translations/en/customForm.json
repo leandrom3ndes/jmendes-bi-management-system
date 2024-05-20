@@ -1,0 +1,37 @@
+{
+  "Page_Name": "Custom Form",
+  "THEADER1" : "Form",
+  "THEADER2" : "ID",
+  "THEADER3" : "Entity Type",
+  "THEADER4" : "Mandatory",
+  "THEADER5" : "State",
+  "THEADER6" : "Updated_on ",
+  "THEADER7" : "Add Form",
+  "THEADER8" : "Transaction Type State",
+  "BTNTABLE1" : "Edit",
+  "BTNTABLE2" : "History",
+  "BTNTABLE3" : "drag and drop reorder",
+  "BTNTABLE4" : "Add Transaction Types",
+  "FORM_DRAG_DROP" : "Drag and Drop Transaction Types",
+  "ADD_FORM_NAME" : "Add new Custom Form",
+  "EDIT_FORM_NAME" : "Edit Custom Form",
+  "VIEW_ENT_TYPE" : "View Transaction Types in ",
+  "ADD_FORM_ENT_TYPE" : "Assigning Transaction Types to Custom Form",
+  "INPUT_NAME" : "Name",
+  "INPUT_STATE" : "State",
+  "NO_ENT_TYPES" : "Without Transaction Types",
+  
+  "LBL1" : "Assigning Transaction Types to",
+  "LBL2" : "Transaction Types List",
+  "BTN1FORM" : "Save",
+
+  "BTNVIEW_ENT_TYPES" : "View Transaction Types",
+  "BTNREMOVE_ENT_TYPES" : "Remove",
+  "LBL3" : "Transaction Types List",
+  "THEADER1VIEW1" : "ID",
+  "THEADER1VIEW2" : "Name",
+  "THEADER1VIEW3" : "Updated",
+
+  "REQUIRED_NAME_PROP_ALLOW" : "Providing a name is mandatory",
+  "REQUIRED_STATE_PROP_ALLOW" : "Providing a state is mandatory"
+}

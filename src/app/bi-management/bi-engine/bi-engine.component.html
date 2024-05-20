@@ -1,0 +1,36 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biDashboard">Painel de controlo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElement">Elementos BI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biElementCollection">Coleção</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/biManagement/biKnowage">Elementos do Knowage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" routerLink="/biManagement/biEngines">Ferramentas BI</a>
+    </li>
+</ul>
+
+<div class="row">
+    <div class="col-md-4 bielement-list" *ngFor="let biEngDetail of allEnginesDetailText">
+        <div class="card mb-4 shadow-sm">
+            <img [src]="biEngDetail.logo_preview" alt="{{ biEngDetail.name }}" class="img-fluid" style="display: block;margin-left: auto;margin-right: auto; width: 50%; height: 130px;"/>
+            <div class="card-body">
+                <h4><a routerLink="/biManagement/biEngineBielements/{{ biEngDetail.id }}">{{ biEngDetail.name }}</a></h4>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" routerLink="/biManagement/biEngineBielements/{{ biEngDetail.id }}">
+                            <i class="fa fa-list"></i> Lista de elementos BI
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

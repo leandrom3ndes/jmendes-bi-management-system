@@ -1,0 +1,74 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add/Edit Process Type</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input class="form-control" id="name" [(ngModel)]="processType.language[0].pivot.name" type="text"
+                       placeholder="Introduzir o nome do Process Type">
+            </div>
+        </div>
+    </div>
+    <!-- /.row-->
+    <!--<div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+
+                <label for="slug">Slug</label>
+                <input class="form-control" id="slug" [(ngModel)]="processType.state" type="text"
+                       placeholder="Introduzir o slug do Process Type">
+            </div>
+        </div>
+    </div>-->
+    <!-- /.row-->
+    <div class="row">
+        <div class="col-sm-12">
+            <!--      <div class="form-group">-->
+            <!--        <label for="data">Data de Nascimento</label>-->
+            <!--        <input type="text"-->
+            <!--               placeholder="Data de Nascimento"-->
+            <!--               class="form-control"-->
+            <!--               bsDatepicker-->
+            <!--               [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-red' }"-->
+            <!--               [(ngModel)]="pessoa.data_de_nascimento"-->
+            <!--        >-->
+            <!--      </div>-->
+            <div class="form-group">
+                <label for="state">Estado</label>
+                <ng-select [items]="processTypeState"
+                           autofocus
+                           placeholder="state"
+                           bindLabel="state"
+                           bindValue="state"
+                           [(ngModel)]="processType.state">
+                </ng-select>
+
+                <!--        <br/>Selected: {{processtype.state | json}}-->
+
+                <!--        <label for="state">State</label>-->
+                <!--        <select formControlName="orders" id="orders">-->
+                <!--          <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">-->
+                <!--            {{orders[i].name}}-->
+                <!--          </option>-->
+                <!--        </select>-->
+            </div>
+        </div>
+    </div>
+    <!-- /.row-->
+    <!--  <div class="row">-->
+    <!--    <div class="col-sm-12">-->
+    <!--      <div class="form-group">-->
+    <!--        <label for="contacto">Contacto</label>-->
+    <!--        <input class="form-control" id="contacto" [(ngModel)]="pessoa.contacto" type="text" placeholder="Introduzir o contacto">-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Guardar</button>
+</div>

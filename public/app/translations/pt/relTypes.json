@@ -1,0 +1,29 @@
+{
+  "Page_Name": "Tipos de Relação",
+  "THEADER1" : "ID",
+  "THEADER2" : "Relação",
+  "THEADER3" : "Entidade",
+  "THEADER4" : "Tipo de Transação",
+  "THEADER5" : "Estado da Transação",
+  "THEADER6" : "Estado",
+  "THEADER7" : "Criado em",
+  "THEADER8" : "Atualizado em",
+  "THEADER9" : "Apagado em",
+  "THEADER10" : "Adicionar Tipos de Relação",
+  "THEADER11" : "Remover",
+  "NO_RELATIONS" : "Não existe Relações",
+  "BTNTABLE1" : "Editar",
+  "BTNTABLE2" : "Histórico",
+
+  "SAVE_SUCCESS_MESSAGE" : "Relação inserida com sucesso!!",
+  "EDIT_SUCCESS_MESSAGE" : "Relação editada com sucesso!!",
+  "SUCCESS" : "Sucesso!!",
+
+  "EDIT_FORM_NAME": "Editar Tipo de Relação",
+  "ADD_FORM_NAME": "Adicionar nova Relação",
+
+  "BTN1FORM" : "Guardar Alterações",
+  
+  "BTNPAGINATION1" : "Próximo",
+  "BTNPAGINATION2" : "Anterior"
+}

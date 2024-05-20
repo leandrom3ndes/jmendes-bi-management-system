@@ -1,0 +1,38 @@
+{
+  "Page_Name": "Formulários Personalizados",
+  "THEADER1" : "Formulário",
+  "THEADER2" : "ID",
+  "THEADER3" : "Tipo de Entidade",
+  "THEADER4" : "Obrigatório",
+  "THEADER5" : "Estado",
+  "THEADER6" : "Atualizado em",
+  "THEADER7" : "Adicionar Formulário",
+  "THEADER8" : "Estado do Tipo de Transação",
+  "BTNTABLE1" : "Editar",
+  "BTNTABLE2" : "Histórico",
+  "BTNTABLE3" : "arraste e solta o reordenamento",
+  "BTNTABLE4" : "Adicionar Tipo de Transação",
+  "FORM_DRAG_DROP" : "Arrastar e Soltar Tipo de Transação",
+  "ADD_FORM_NAME" : "Adicionar novo Formulários Personalizado",
+  "EDIT_FORM_NAME" : "Editar Formulários Personalizado",
+  "VIEW_ENT_TYPE" : "Ver Tipo de Transação em  ",
+  "ADD_FORM_ENT_TYPE" : "Atribuindo Tipo de Transação ao Formulário Personalizado",
+  "INPUT_NAME" : "Nome",	
+  "INPUT_STATE" : "Estado",
+  "NO_ENT_TYPES" : "Sem Tipo de Transação",
+
+  "LBL1" : "Atribuindo Tipo de Transação ao",
+  "LBL2" : "Lista de Tipo de Transação",
+  "BTN1FORM" : "Guardar",
+
+  "BTNVIEW_ENT_TYPES" : "Ver Tipo de Transação",
+  "BTNREMOVE_ENT_TYPES" : "Remover",
+  "LBL3" : "Lista de Tipo de Transação",
+  "THEADER1VIEW1" : "ID",
+  "THEADER1VIEW2" : "Nome",
+  "THEADER1VIEW3" : "Actualizado",
+
+  "REQUIRED_NAME_PROP_ALLOW" : "Fornecer um nome é obrigatório",
+  "REQUIRED_STATE_PROP_ALLOW" : "Fornecer um estado é obrigatório"
+
+}

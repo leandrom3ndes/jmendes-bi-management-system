@@ -1,0 +1,33 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="GET" />
+  <option name="urlBase" value="http://localhost:8001" />
+  <option name="urlPath" value="api/auth/dashboard/get_form/19" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="X-Requested-With" />
+        <option name="value" value="XMLHttpRequest" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk2Nzg5MjViM2JjNmU4Y2VlNWQ5NmM4YmE5NGY0ZmUyZTgyNGY5MTUzYThkZjU0ZjZkYjUyNjFkOWNhMzk2ZTBhNWNkY2NiODM4NmViNjMxIn0.eyJhdWQiOiIxIiwianRpIjoiOTY3ODkyNWIzYmM2ZThjZWU1ZDk2YzhiYTk0ZjRmZTJlODI0ZjkxNTNhOGRmNTRmNmRiNTI2MWQ5Y2EzOTZlMGE1Y2RjY2I4Mzg2ZWI2MzEiLCJpYXQiOjE1OTQ4MDE0ODQsIm5iZiI6MTU5NDgwMTQ4NCwiZXhwIjoxNjI2MzM3NDg0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.WAlpJ0yC9OXH_lumJgaH1FZMDy6WRYLgYv9F1jF6xoAHQU0ZqxM38t4Cu4MgCgUpFwB0vE5G7LFJTByR7L9DReP0FMzoQNyLotvbZqSsZYrqjizj7xD7AOnwkVssLwR51p_b08ODXmi_PmPOC_aBiYkA6HLfgm_bUXikWopvUbG04m8nchCwuUVCBo0IeHBgeZiMLQ2cX_rd0GkQuOWW9xlfZnyU4TxE0Q7TsPR3mLFZnMIcrrkOuj_EegfWqPwuPS0lzR6MFOr0Qii3LDhsJtCe-dUGbomVq9OOqb1T-39srOJvWZSas5vpfnFOzGt-WAzTW2n9ltF8yWdk7ZXIIHY8DfuJXofg9DgRLzRZZrRHDQnWj1ZgB9sTMJy10jR99_nLxwbGswrUuEDPO-6paBgzg0oI1PcV8pV7qcq5r4EKwUxCn4ez3OvOYJ3odUobHCk0Skn2-NnrKVLxv7PFY9d3ZFtxN3ixdCHjuijRyxy3M-nbpbTskBA1JujPDqfkX7jrFvK3_JKS3ZIO_m0dyXzMxStlGIxQ5t-dhNnF490P_cWtDXXwk9ONpB5pVxmU4bge0RpR-pmn2apGqCRPQVXCeCMZPfPiqYHvsf9zJPBeFzWkbxhW8vwa2KA8Fv8cOl1M5o1mqLp2xG4uqFDeiv03wZZJbD1Q7VkLth5bEyQ" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="false" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

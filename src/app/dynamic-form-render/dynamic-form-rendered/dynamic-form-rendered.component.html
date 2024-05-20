@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-header text-center">
+      {{ 'FORM-RENDER.HEADER-RENDERED-FORM' | translate }}
+    </div>
+    <div class="card-body">
+      <formio *ngIf="needUpdate" [form]="myForm" [options]="optionsFormio" [language]="language" (submit)="onSubmit($event)"></formio>
+    </div>
+    <div class="card-footer text-muted text-center">
+      <button type="button" class="btn btn-success" (click)="goBack()"> {{ 'FORM-RENDER.BACK-BUTTON' | translate }} </button>
+    </div>
+  </div>
+</div>
+
+
+

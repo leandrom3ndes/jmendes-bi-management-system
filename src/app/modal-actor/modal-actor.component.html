@@ -1,0 +1,73 @@
+<div class="modal-header">
+    <h4 class="modal-title">Actor</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input class="form-control" id="name" [(ngModel)]="actor.name" type="text"
+                       placeholder="Introduzir o nome do Actor">
+            </div>
+        </div>
+    </div>
+    <!-- /.row-->
+    <!--<div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="slug">Slug</label>
+                <input class="form-control" id="slug" [(ngModel)]="actor.slug" type="text"
+                       placeholder="Introduzir  o slug da Linguagem">
+            </div>
+        </div>
+    </div>-->
+    <!-- /.row-->
+    <!--<div class="row">
+        <div class="col-sm-12">
+            &lt;!&ndash;      <div class="form-group">&ndash;&gt;
+            &lt;!&ndash;        <label for="data">Data de Nascimento</label>&ndash;&gt;
+            &lt;!&ndash;        <input type="text"&ndash;&gt;
+            &lt;!&ndash;               placeholder="Data de Nascimento"&ndash;&gt;
+            &lt;!&ndash;               class="form-control"&ndash;&gt;
+            &lt;!&ndash;               bsDatepicker&ndash;&gt;
+            &lt;!&ndash;               [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-red' }"&ndash;&gt;
+            &lt;!&ndash;               [(ngModel)]="pessoa.data_de_nascimento"&ndash;&gt;
+            &lt;!&ndash;        >&ndash;&gt;
+            &lt;!&ndash;      </div>&ndash;&gt;
+            <div class="form-group">
+                <label for="state">Estado</label>
+                <ng-select [items]="actorState"
+                           autofocus
+                           placeholder="state"
+                           bindLabel="state"
+                           bindValue="state"
+                           [(ngModel)]="actor.state">
+                </ng-select>
+
+                &lt;!&ndash;        <br/>Selected: {{actor.state | json}}&ndash;&gt;
+
+                &lt;!&ndash;        <label for="state">State</label>&ndash;&gt;
+                &lt;!&ndash;        <select formControlName="orders" id="orders">&ndash;&gt;
+                &lt;!&ndash;          <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">&ndash;&gt;
+                &lt;!&ndash;            {{orders[i].name}}&ndash;&gt;
+                &lt;!&ndash;          </option>&ndash;&gt;
+                &lt;!&ndash;        </select>&ndash;&gt;
+            </div>
+        </div>
+    </div>-->
+    <!-- /.row-->
+    <!--  <div class="row">-->
+    <!--    <div class="col-sm-12">-->
+    <!--      <div class="form-group">-->
+    <!--        <label for="contacto">Contacto</label>-->
+    <!--        <input class="form-control" id="contacto" [(ngModel)]="pessoa.contacto" type="text" placeholder="Introduzir o contacto">-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Guardar</button>
+</div>

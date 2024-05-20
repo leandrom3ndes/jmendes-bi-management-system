@@ -1,0 +1,101 @@
+<div class="modal-header">
+    <h4 class="modal-title">Elementos BI</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Ferramenta BI</label>
+                <ng-select [items]="allEngines | async"
+                   placeholder="Selecione a ferramenta BI"
+                   bindLabel="name"
+                   bindValue="id"
+                   [(ngModel)]="biElementData.bi_engine_id">
+                    <ng-template ng-header-tmp>
+                        Ferramentas BI
+                    </ng-template>
+                </ng-select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Tipo</label>
+                <ng-select [items]="biElementTypeSlug | async"
+                           bindLabel="slug"
+                           bindValue="id"
+                           placeholder="Selecione o tipo"
+                           [editableSearchTerm]="true"
+                           [(ngModel)]="biElementData.bi_element_type_id">
+                    <ng-template ng-header-tmp>
+                        Tipos slug
+                    </ng-template>
+                </ng-select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input class="form-control" id="name"  [(ngModel)]="biElementData.name" type="text" placeholder="Introduzir o nome do elemento BI">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <input class="form-control" id="description" [(ngModel)]="biElementData.description" type="text" placeholder="Introduzir o descrição do elemento BI">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="embed">URL de integração</label>
+                <input class="form-control" id="embed" [(ngModel)]="biElementData.embed" type="text" placeholder="Introduzir o URL de integração do elemento BI">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <form>
+                    <div class="form-group">
+                        <fieldset class="form-group">
+                            <label>Imagem de pré-visualização</label>
+                            {{imageError}}
+                            <div class="custom-file fileInputProfileWrap">
+                                <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                                <div class="img-space">
+                                    <ng-container *ngIf="biElementData.preview?.length && !isImageSaved;">
+                                        <img [src]="biElementData.preview" />
+                                    </ng-container>
+                                    <ng-container *ngIf="!biElementData.preview?.length || isImageSaved; then thenTemplate2;">
+                                    </ng-container>
+                                    <ng-container *ngIf="!biElementData.preview?.length && !isImageSaved; then elseTemplate;">
+                                    </ng-container>
+                                    <ng-template #thenTemplate2>
+                                        <img [src]="cardImageBase64" />
+                                    </ng-template>
+                                    <ng-template #elseTemplate>
+                                        <img src="../../../../assets/img/Item_sem_imagem.png" class="img-responsive">
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a class="btn btn-danger" (click)="removeImage()" *ngIf="isImageSaved">Remover</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Guardar</button>
+</div>

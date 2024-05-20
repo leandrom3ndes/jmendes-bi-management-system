@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h4 class="modal-title">Fill the following form</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">X</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <formio *ngIf="needUpdate" [form]="myForm" [options]="optionsFormio" [language]="language" (submit)="onSubmit($event)"></formio>
+      </div>
+    </div>
+  </div>
+</div>

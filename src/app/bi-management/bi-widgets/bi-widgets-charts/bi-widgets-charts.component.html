@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-chart-area mr-1"></i>
+                Elementos BI
+            </div>
+            <div class="card-body">
+                <div echarts [options]="chartOption" class="demo-chart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-chart-bar mr-1"></i>
+                Elementos do Knowage
+            </div>
+            <div class="card-body">
+                <div echarts [options]="chartOption" class="demo-chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div echarts [options]="options" class="demo-chart"></div>

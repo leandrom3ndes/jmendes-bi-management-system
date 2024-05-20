@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h4 class="modal-title">Tipos de Bi Elements</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input class="form-control" id="name"  [(ngModel)]="biElementTypeData.name" type="text" placeholder="Introduzir um nome para este tipo de Bi Element">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="slug">Slug</label>
+                <input class="form-control" id="slug" [(ngModel)]="biElementTypeData.slug" type="text" placeholder="Introduzir um slug para este tipo de Bi Element">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <input class="form-control" id="description" [(ngModel)]="biElementTypeData.description" type="text" placeholder="Introduzir uma descrição para este tipo de Bi Element">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Guardar</button>
+</div>

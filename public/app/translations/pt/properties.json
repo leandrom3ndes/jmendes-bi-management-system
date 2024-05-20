@@ -1,0 +1,38 @@
+{
+  "Page_Name": "Propriedades",
+  "THEADER1" : "Entidade",
+  "THEADER2" : "ID",
+  "THEADER3" : "Propriedade",
+  "THEADER4" : "Tipo de Valor",
+  "THEADER5" : "Nome do Campo",
+  "THEADER6" : "Tipo de Campo",
+  "THEADER7" : "Unidade",
+  "THEADER8" : "Tamanho do Campo",
+  "THEADER9" : "Obrigatório",
+  "THEADER10" : "Estado",
+  "THEADER11" : "Criado em",
+  "THEADER12" : "Atualizado em",
+  "THEADER13" : "Apagado em",
+  "THEADER14" : "Adicionar Propriedades",
+  "THEADER15" : "Relação",
+  "BTNTABLE1" : "Editar",
+  "BTNTABLE2" : "Histórico",
+  "BTNTABLE3" : "Reordenar Propriedades",
+  "BTNTABLE4" : "Remover",
+
+  "NO_PROPERTIES" : "Não existe propriedades",
+
+  "SAVE_SUCCESS_MESSAGE" : "Propriedade inserida com sucesso!!",
+  "EDIT_SUCCESS_MESSAGE" : "Propriedade editada com sucesso!!",
+  "SUCCESS" : "Sucesso!!",
+
+  "EDIT_FORM_NAME": "Editar propriedade",
+  "ADD_FORM_NAME": "Adicionar nova Propriedade",
+
+  "INPUT_REF_ENT" : "Entidade referenciada",
+  "FORM_DRAG_DROP" : "Arrastar e soltar Propriedades",
+
+  "BTN1FORM" : "Guardar Alterações",
+  "BTNPAGINATION1" : "Próximo",
+  "BTNPAGINATION2" : "Anterior"
+}

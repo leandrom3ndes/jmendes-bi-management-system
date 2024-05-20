@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>{{ 'BLOCKLY-PAGE.ACTIONS' | translate }}</strong>
+      </div>
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+            <button class="btn btn-block btn-primary" (click)='openModal()'>{{ 'BLOCKLY-PAGE.LOAD-AR' | translate }}
+            </button>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+            <button class="btn btn-block btn-primary" (click)='parserXML()'>{{ 'BLOCKLY-PAGE.SAVE-TO-DB' | translate }}
+            </button>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+            <button class="btn btn-block btn-primary" (click)='showCode()'>{{ 'BLOCKLY-PAGE.SHOW-CODE' | translate }}
+            </button>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+            <button class="btn btn-block btn-primary" (click)='showXmlCode()'>{{ 'BLOCKLY-PAGE.SHOW-XML-BLOCKLY' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i>{{'BLOCKLY-PAGE.GENERATOR' | translate}}
+      </div>
+      <div class="card-body">
+
+        <table>
+          <tr>
+            <td id="blocklyArea">
+              <div style="width: 20%;">
+                <hr>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+
+        <div id="blocklyDiv" style="height: 600px; width: 100%;"></div>
+
+        <xml id="toolbox" style="display: none;">
+
+          <category name = "General" colour="315">
+            <block type="when_is_do"></block>
+            <block type="action"></block>
+            <block type="if_then"></block>
+            <block type="while"></block>
+          </category>
+
+          <category name = "Evaluate" colour = 140>
+            <block type="condition"></block>
+            <block type="comp_evaluated_expression"></block>
+            <block type="user_evaluated_expression"></block>
+          </category>
+
+          <category name = "Compute" colour="210">
+            <block type="compute_expression"></block>
+            <block type="query"></block>
+            <block type="constant"></block>
+            <block type="value"></block>
+          </category>
+
+          <category name="User Input" colour="280">
+            <block type="property"></block>
+            <block type="form_compute"></block>
+            <block type="math_number">
+              <field name="NUM">123</field>
+            </block>
+            <block type="enable_condition"></block>
+            <block type="validation_condition"></block>
+            <block type="condition_validation_condition"></block>
+          </category>
+
+          <category name="Properties" colour="50">
+            <block type="property_single"></block>
+            <block type="property_value"></block>
+          </category>
+
+        </xml>
+
+      </div>
+    </div>
+  </div>
+  <!-- /.col-->
+</div>
+pt>

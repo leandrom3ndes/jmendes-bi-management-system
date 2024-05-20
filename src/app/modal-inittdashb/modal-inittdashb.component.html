@@ -1,0 +1,73 @@
+<div class="modal-header">
+  <h4 class="modal-title">Continue Transaction</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="idtransaction">Id</label>
+        <input class="form-control" id="idtransaction" [(ngModel)]="initTDashb.id" type="text" placeholder="Introduzir">
+      </div>
+    </div>
+  </div>
+</div>
+<!--  &lt;!&ndash; /.row&ndash;&gt;-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12">-->
+<!--      <div class="form-group">-->
+<!--        <label for="slug">Slug</label>-->
+<!--        <input class="form-control" id="slug" [(ngModel)]="language.slug" type="text" placeholder="Introduzir  o slug da Linguagem">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; /.row&ndash;&gt;-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12">-->
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="data">Data de Nascimento</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;               placeholder="Data de Nascimento"&ndash;&gt;-->
+<!--&lt;!&ndash;               class="form-control"&ndash;&gt;-->
+<!--&lt;!&ndash;               bsDatepicker&ndash;&gt;-->
+<!--&lt;!&ndash;               [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-red' }"&ndash;&gt;-->
+<!--&lt;!&ndash;               [(ngModel)]="pessoa.data_de_nascimento"&ndash;&gt;-->
+<!--&lt;!&ndash;        >&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <div class="form-group">-->
+<!--        <label for="state">Estado</label>-->
+<!--        <ng-select [items]="languageState"-->
+<!--                   autofocus-->
+<!--                   placeholder="state"-->
+<!--                   bindLabel="state"-->
+<!--                   bindValue="state"-->
+<!--                   [(ngModel)]="language.state">-->
+<!--        </ng-select>-->
+
+<!--        <br/>Selected: {{language.state | json}}-->
+
+<!--        <label for="state">State</label>-->
+<!--        <select formControlName="orders" id="orders">-->
+<!--          <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">-->
+<!--            {{orders[i].name}}-->
+<!--          </option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; /.row&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-sm-12">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="contacto">Contacto</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-control" id="contacto" [(ngModel)]="pessoa.contacto" type="text" placeholder="Introduzir o contacto">&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--</div>-->
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="something()">Continuar</button>
+</div>
+

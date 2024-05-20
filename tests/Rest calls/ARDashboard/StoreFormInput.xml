@@ -1,0 +1,33 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://localhost:8001" />
+  <option name="urlPath" value="api/auth/dashboard/store_form_input" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="X-Requested-With" />
+        <option name="value" value="XMLHttpRequest" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIyMTBkMzk4NTBmOWQ4OWRmODRhNjU4ZjZjMTg5YjJmMmY2NDNmMGQ2ZThjYmZiNTU3OTczNjEzMjg0ZTIwNTAwYmIxYzMzYjkzZjdhNjYzIn0.eyJhdWQiOiIxIiwianRpIjoiMjIxMGQzOTg1MGY5ZDg5ZGY4NGE2NThmNmMxODliMmYyZjY0M2YwZDZlOGNiZmI1NTc5NzM2MTMyODRlMjA1MDBiYjFjMzNiOTNmN2E2NjMiLCJpYXQiOjE1OTUzODgxNjksIm5iZiI6MTU5NTM4ODE2OSwiZXhwIjoxNjI2OTI0MTY5LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.J46EwfBGABudAV5bOaUktJOEHWHQxGHSv85PjM8IVMfGumS_-ZzgMH7bcBuwzkCjcwbQJUo9skg_0fwocMD26WhpmhOki9GqTVYpr46NXs_h6LBlAMBSFrg2Lm_bZ9qJOiDGQyuKn0EdvQddTsE-7YA23g0qm4v93Q3GljnZe-Py3dTt_c6Fc-Qb5iFNVXGMPpDTfScRx3Lk6lEZDjdSt5SKJVv92byFVDOuV-AulIS9hfW41IH8QYIptlQWp9rJ-k1QMkucWwtZ9aOl7zrK865Q2Jiz_DDpbVzPluLlKBqDF5Rf8DAr031k5yc_w6A4OJkQVd-X96L7C7d_03b1vlblO_PBlwSkGKD11R-RyIiVKtq001q2kPnXYjpP4HLamBGxCGF-3UBLiPDzBVGDlejoIHZWs2KKFZtyn5FEXLSOxTWtybEAYI-E23nw7PIw2zVPyAXTWSm8IfIjEjijpcmpZvvQ22Ym9XFkuZBMYtLkmHWJjo0UEPzZ5rt50mBKqBvZ5EkMSkzRQ7PDi9GNg0X-egrKexfm8ewzOeOj3_BAq9aAJWYnKu3U5y9enL_sDl_pDV2xEo0fjw4L_QOq1AOEFRF_uogJ5MKWr8bFbhJWiDXDtDybvfyqygT3tdeA1ri64pA-gYeqwr8b4tzwACrKcZkZJba9riqbophv6FE" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="{&quot;submittedValues&quot;: [[&quot;5&quot;, &quot;123&quot;], [&quot;9&quot;, &quot;17&quot;], [&quot;submit&quot;, true]],&quot;transactionId&quot;: 1}" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

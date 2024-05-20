@@ -1,0 +1,31 @@
+.white-letters {
+  color: white;
+}
+
+.colour-select-dark-pink {
+  background-color:#ff4040;
+}
+.colour-select-pink {
+  background-color:#ff66b3;
+}
+.colour-select-light-pink {
+  background-color:#ff8080;
+}
+.colour-select-purple {
+  background-color:#6600cc;
+}
+.colour-select-light-purple {
+  background-color:#8080ff;
+}
+.colour-select-light-orange {
+  background-color:#fd9d47;
+}
+.colour-select-dark-blue {
+  background-color:#000099;
+}
+.colour-select-dark-red {
+  background-color:#420420;
+}
+.colour-select-grey {
+  background-color:#696969;
+}

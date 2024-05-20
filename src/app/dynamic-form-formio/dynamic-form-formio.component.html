@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header text-center">
+    {{ 'FORMIO.HEADER' | translate }}
+  </div>
+  <div class="card-body">
+    <form-builder *ngIf="needUpdate" [form]="myForm" [options]="options" (change)="onChange($event)"></form-builder>
+  </div>
+  <div class="card-footer text-muted text-center">
+    <button type="button" class="btn btn-success" (click)="saveForm()"> {{ 'FORMIO.SAVE-BUTTON' | translate }} </button>
+  </div>
+</div>

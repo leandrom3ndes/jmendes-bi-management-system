@@ -1,0 +1,151 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ 'TEMPLATE-EDITOR.MODAL.MODAL-TITLE' | translate }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="name">{{ 'TEMPLATE-EDITOR.MODAL.NAME' | translate }}</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="template.name"
+               placeholder="{{ 'TEMPLATE-EDITOR.MODAL.NAME-PLACEHOLDER' | translate }}" required>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.NAME-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="type">{{ 'TEMPLATE-EDITOR.MODAL.TYPE' | translate }}</label>
+        <select class="form-control" id="type"  [(ngModel)]="template.type" (change)="onTypeChange($event)" required>
+          <option value="modal">
+            {{ 'TEMPLATE-EDITOR.MODAL.TYPE-WINDOW' | translate }}
+          </option>
+          <option value="toast">
+            {{ 'TEMPLATE-EDITOR.MODAL.TYPE-NOTIFICATION' | translate }}
+          </option>
+        </select>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.TYPE-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isModal" class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="modalHeader">{{ 'TEMPLATE-EDITOR.MODAL.WINDOW-HEADER' | translate }}</label>
+        <input type="text" class="form-control" id="modalHeader" [(ngModel)]="template.header"
+               placeholder="{{ 'TEMPLATE-EDITOR.MODAL.WINDOW-HEADER-PLACEHOLDER' | translate }}" required>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.WINDOW-HEADER-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isModal" class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="modalButton">{{ 'TEMPLATE-EDITOR.MODAL.WINDOW-BUTTON' | translate }}</label>
+        <input type="text" class="form-control" id="modalButton" [(ngModel)]="template.button"
+               placeholder="{{ 'TEMPLATE-EDITOR.MODAL.WINDOW-BUTTON-PLACEHOLDER' | translate }}" required>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.WINDOW-BUTTON-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isToast" class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="toastClass">{{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-CLASS' | translate }}</label>
+        <select class="form-control" id="toastClass"  [(ngModel)]="template.class" (change)="onClassChange($event)" required>
+          <option *ngFor="let templateClass of templateClass" value="{{templateClass[1]}}">
+            {{templateClass[0]}}
+          </option>
+        </select>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-CLASS-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isToast && isClassCustom" class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="toastTitle">{{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-TITLE' | translate }}</label>
+        <input type="text" class="form-control" id="toastTitle" [(ngModel)]="template.title"
+               placeholder="{{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-TITLE-PLACEHOLDER' | translate }}" required>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-TITLE-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isToast && isClassCustom" class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="templateColour">{{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOUR' | translate }}</label>
+        <select class="form-control" id="templateColour"
+                [(ngModel)]="template.colour" (change)="changeSelectBackgroundColour()">
+          <option class="white-letters colour-select-dark-pink" value="#ff4040">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.DARK-PINK' | translate }}
+          </option>
+          <option class="white-letters colour-select-pink" value="#ff66b3">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.PINK' | translate }}
+          </option>
+          <option class="white-letters colour-select-light-pink" value="#ff8080">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.LIGHT-PINK' | translate }}
+          </option>
+          <option class="white-letters colour-select-purple" value="#6600cc">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.PURPLE' | translate }}
+          </option>
+          <option class="white-letters colour-select-light-purple" value="#8080ff">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.LIGHT-PURPLE' | translate }}
+          </option>
+          <option class="white-letters colour-select-light-orange" value="#fd9d47">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.LIGHT-ORANGE' | translate }}
+          </option>
+          <option class="white-letters colour-select-dark-blue" value="#000099">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.DARK-BLUE' | translate }}
+          </option>
+          <option class="white-letters colour-select-dark-red" value="#420420">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.DARK-RED' | translate }}
+          </option>
+          <option class="white-letters colour-select-grey" value="#696969">
+            {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOURS.GREY' | translate }}
+          </option>
+        </select>
+        <div class="invalid-feedback">
+          {{ 'TEMPLATE-EDITOR.MODAL.NOTIFICATION-COLOUR-INVALID' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <editor
+    [(ngModel)]="template.text"
+    apiKey="mmun0ey6stgzacfxrzupwc5z7ftf7xw8luinw8qx3vyxslnp"
+    [init]="{
+      inline: false,
+      branding: false,
+      min_height: 300,
+      plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table paste template noneditable'
+      ],
+      toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+      }"
+  >
+  </editor>
+  {{template.text}}
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="passBack()">
+    {{ 'TEMPLATE-EDITOR.MODAL.SAVE' | translate }}
+  </button>
+</div>

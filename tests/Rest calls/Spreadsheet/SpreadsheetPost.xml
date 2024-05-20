@@ -1,0 +1,25 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://localhost:8001" />
+  <option name="urlPath" value="api/auth/spreadsheet/uploadSpreadsheet/" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRkYzk1ZTUzYTFjODI3MTI2MjExOTE0YzYwMWYxNWE5YzlhZjE1NmRkZDE2ZTlhMzM4ZWI2MmM2OGZlYWFlNmQxZDJkZTcwMDBlYzk5ZGIwIn0.eyJhdWQiOiIzIiwianRpIjoiNGRjOTVlNTNhMWM4MjcxMjYyMTE5MTRjNjAxZjE1YTljOWFmMTU2ZGRkMTZlOWEzMzhlYjYyYzY4ZmVhYWU2ZDFkMmRlNzAwMGVjOTlkYjAiLCJpYXQiOjE1ODQyMTY3ODgsIm5iZiI6MTU4NDIxNjc4OCwiZXhwIjoxNjE1NzUyNzg4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.nzIz1rQ4KiJwBa9LJb_MpzABLioOYitHO23wNPs0Q25IxBYSlPtIWnOVHyG4rAPhAuDkOF-IumCfWTOHOHDU8KNTGw84ZcVtnEEbjSBQrei2roLBgNGbh9q-OPQGsGCE_eveDJ2C527-OjGgJE9cGlP9N3RpTK76IDjB_tg3hW1Do_HMBgN0op0Dnu7lsWZl1pOi8JimpPKVhSmN1bctEzNaFEIp32_oBNOsZ_n8B4BIQf1mpQ2W9_PLY6NW1pAv5BaIP0hEt5BzhSuIaEhI9Mt6wBtUf2vPtWahJcqU2n-oarZmNO24dgl_JpqDdH2Dw3OG2MeZePsbapQCRwfmtWEHFuQTEtnS4DPX7PiQdLOCYycaXUVW20sETkTFbde7kgXqILNPN_XOwnUxRony66IWHpmnrlm8YXxtv4A0t-xR3MURouWg_w-wvacDIpYtSyRgurl1dqMm6fbY-CrJ71MDlt1Ckt0AwUsccNiD15VL0fa6VLne4lLX8jGPAZjRw9b93qfZYZJQCRxcDkI7KxoxVZpfX5xaCQEUku-aKIM_SW0jLTgSR3ZFvTTVwAk5i20z3yg8i6sSroaOB0owSRvYc1332QZBUyv7bH2u5hSZ0VNphQle3oxi8echqorIXcIpci2UP-fA7WWpHq_S8rIB23fDZgDGaX-nVAIcorA" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="false" />
+  <option name="haveFileToSend" value="true" />
+  <option name="isFileUpload" value="true" />
+  <option name="textToSend" value="" />
+  <option name="filesToSend" value="C:/disme_bd_v_0001_import_file.xlsx" />
+</RestClientRequest>

@@ -1,0 +1,18 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{templateHeader}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">X</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <span [innerHTML]="templateText"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="passBack()">{{templateButton}}</button>
+</div>

@@ -1,0 +1,29 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="GET" />
+  <option name="urlBase" value="http://localhost:8001" />
+  <option name="urlPath" value="api/auth/actors/1" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Content-Type" />
+        <option name="value" value="application/json" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI2NTEwZDRjYWZkZGU4YTI0MGE5NWE5Nzk0YTg2NzNiOGRmMzUyZDBlNzQ2YmUxMGExMGFjNjdhYTkzYjA2NmZjMWY3NWNhYWYxNjQ5ZTNlIn0.eyJhdWQiOiIxIiwianRpIjoiMjY1MTBkNGNhZmRkZThhMjQwYTk1YTk3OTRhODY3M2I4ZGYzNTJkMGU3NDZiZTEwYTEwYWM2N2FhOTNiMDY2ZmMxZjc1Y2FhZjE2NDllM2UiLCJpYXQiOjE1Nzk2MDc2NDksIm5iZiI6MTU3OTYwNzY0OSwiZXhwIjoxNjExMjMwMDQ5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.3EJ3DaidSOJdjnxXiCwTX_FYaTPsx-8hVJEI5F7QoQDmY4nkLk01MLcHYtYvAxzS4bFs4WJV_s_r3WpYPR-Lf4xSFWUEZi8JQqhH60seyVDxCPpVy656GdJksU3WFibLLzyq4r7NPewMHp9dYEIsjLceXIo17GTI5Kh43iLmfBBoC54d1OH3yldThqWZz3p5PPOHr-s9NkLpgrSMOsXFwCAOic9HEDwUi-uHzOgJ065m_uIgRHWG52laTW_scKJcg2rxy-G6aaZogwSqm3gng4o0GexTZY1AiU5o9liIbFQcGBDSzzWkpSVdFBgQgPjFK3Y9juLH6T6pZaqFI05yPQmH3kd2MeSU9u9rMB4rf5OAtjFYMqjYt9_Rb90qVHVTia5_3-ZzbDFcfPuxP8r93f79amJ4ZMGRZdPdF9mKPgXDo0HnU-peo6XAE2ah2hc1IgAVtlySFTxYQI-tMZDQlNBkP8ZewOXRXhGQn1ihJbLD6-yDXW1YO3bjj4zjvZJ6rfIjmF1gagTAInje_nYgDjISk3D25P0d0xFix1f-sBFcEmelpa8_zlevABhdH24fqhn4oniLOIztE_vDhX40vjboRX3sqBMnB8F6b_pwsMGBqW2p87PNqK4tBvilQqjo1WurSuQG5AUGARWZJCwUoH1UE8es1W4rSZVYHSbYiIg" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list />
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="{&quot;name&quot;:&quot;Teste POST Actor&quot;}" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>

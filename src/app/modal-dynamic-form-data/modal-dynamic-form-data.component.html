@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <h4 class="modal-title">Dynamic Form</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="action">Property</label>
+                <!--<ng-select [items]="actions"
+                            autofocus
+                            placeholder="action"
+                            bindLabel="action"
+                            bindValue="action"
+                            [(ngModel)]="action.name"
+                            placeholder="Enter field property">
+                </ng-select>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="saveData()">Proceed</button>
+</div>
